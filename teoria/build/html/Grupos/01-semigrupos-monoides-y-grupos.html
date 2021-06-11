@@ -1,0 +1,799 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1. Semigrupos, Monoides y Grupos &mdash; documentación de Teoría de Grupos con aplicaciones en GAP - 0.0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="2. Homomorfismos y Subgrupos" href="02-homomorfismos-y-subgrupos.html" />
+    <link rel="prev" title="Teoría de Grupos con aplicaciones en GAP" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Teoría de Grupos con aplicaciones en GAP
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Grupo:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Semigrupos, Monoides y Grupos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definicion-de-grupo">1.1. Definición de Grupo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#teorema">1.2. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#proposicion">1.3. Proposición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.4. Proposición</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplos">1.4.1. Ejemplos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplo-el-grupo-de-simetrias-del-triangulo">1.4.2. Ejemplo: el grupo de simetrías del triángulo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplo-el-grupo-de-simetrias-del-cuadrado">1.4.3. Ejemplo: el grupo de simetrías del cuadrado</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplo-el-grupo-de-permutaciones-de-un-conjunto">1.4.4. Ejemplo: el grupo de permutaciones de un conjunto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplo-el-producto-cartesiano-de-grupos">1.4.5. Ejemplo: el producto cartesiano de grupos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#teorema-de-relacion-de-equivalencia">1.5. Teorema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplo">1.5.1. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1.5.2. Ejemplo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#teorema-ley-asociativa-generalizada">1.6. Teorema (Ley Asociativa generalizada)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#corolario-ley-conmutativa-generalizada">1.7. Corolario (Ley conmutativa generalizada)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definicion">1.8. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">1.9. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ejercicios">1.10. Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="02-homomorfismos-y-subgrupos.html">2. Homomorfismos y Subgrupos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-grupos-ciclicos.html">3. Grupos Cíclicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-coclases.html">4. Coclases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-normalidad-grupo-cociente-y-homomorfismos.html">5. Normalidad, Grupo Cociente y Homomorfismos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-grupo-simetrico-alternante-dihedral.html">6. Grupo Simétrico, Alternante y Dihedral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-categorias-productos-coproductos-y-objetos-libres.html">7. Categorias: Productos, Coproductos y Objetos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-productos-directos-y-sumas-directas.html">8. Productos directos y Sumas directas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-grupos-libres-productos-libres-generadores-y-relaciones.html">9. Grupos Libres, Productos Libres, Generadores y Relaciones</a></li>
+</ul>
+<p class="caption"><span class="caption-text">La estructura de Grupo:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/01-grupos-abelianos-libres.html">1. Grupos Abelianos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/02-grupos-abelianos-finitamente-generados.html">2. Grupos Abelianos Finitamente Generados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/03-el-teorema-de-krull-schmidt.html">3. El Teorema de Krull-Schmidt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/04-la-accion-de-un-grupo-sobre-un-conjunto.html">4. La Acción de un Grupo sobre un Conjunto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/05-los-teoremas-de-sylow.html">5. Los Teoremas de Sylow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/06-clasificacion-de-grupos-finitos.html">6. Clasificación de Grupos Finitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/07-grupo-nilpotente-y-solubles.html">7. Grupo Nilpotente y Soluble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/08-serie-normal-y-subnormal.html">8. Serie Normal y Subnormal</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Teoría de Grupos con aplicaciones en GAP</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>Semigrupos, Monoides y Grupos</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Grupos/01-semigrupos-monoides-y-grupos.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="semigrupos-monoides-y-grupos">
+<h1><span class="section-number">1. </span>Semigrupos, Monoides y Grupos<a class="headerlink" href="#semigrupos-monoides-y-grupos" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Si <span class="math notranslate nohighlight">\(G\)</span> es un conjunto no vacío, una operación binaria en <span class="math notranslate nohighlight">\(G\)</span> es una función <span class="math notranslate nohighlight">\(G\times G\to G\)</span>. Hay varias notaciones de uso común para la imagen de <span class="math notranslate nohighlight">\((a, b)\)</span> en una operación binaria:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(ab\)</span> (notación multiplicativa),</p></li>
+<li><p><span class="math notranslate nohighlight">\(a + b\)</span> (notación aditiva),</p></li>
+<li><p><span class="math notranslate nohighlight">\(a . b\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(a \ast b\)</span>, etc.</p></li>
+</ul>
+</div></blockquote>
+<p>Por conveniencia, generalmente usaremos la notación multiplicativa a lo largo de este capítulo y nos referiremos a <span class="math notranslate nohighlight">\(ab\)</span> como el producto de <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span>.</p>
+<p>Un conjunto puede tener varias operaciones binarias definidas en él (por ejemplo, suma y multiplicación ordinarias en <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> dadas por <span class="math notranslate nohighlight">\((a, b)\mapsto a + b\)</span> y <span class="math notranslate nohighlight">\((a, b)\mapsto ab\)</span> respectivamente).</p>
+<div class="section" id="definicion-de-grupo">
+<span id="id1"></span><h2><span class="section-number">1.1. </span>Definición de Grupo<a class="headerlink" href="#definicion-de-grupo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Un <strong>semigrupo</strong> es un conjunto <span class="math notranslate nohighlight">\(G\)</span> no vacío junto con una operación binaria en <span class="math notranslate nohighlight">\(G\)</span> que es</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Asociativa: <span class="math notranslate nohighlight">\(a(bc) = (ab)c\)</span> para todo <span class="math notranslate nohighlight">\(a, b, c\in G\)</span>;</p></li>
+</ol>
+<p>Un <strong>monoide</strong> es un semigrupo <span class="math notranslate nohighlight">\(G\)</span> que contiene un</p>
+<ol class="arabic simple" start="2">
+<li><p>elemento de identidad (a ambos lados) <span class="math notranslate nohighlight">\(e\in G\)</span> tal que <span class="math notranslate nohighlight">\(ae = ea = a\)</span> para todo <span class="math notranslate nohighlight">\(a\in G\)</span>;</p></li>
+</ol>
+<p>Un <strong>grupo</strong> es un monoide <span class="math notranslate nohighlight">\(G\)</span> tal que
+3. para cada <span class="math notranslate nohighlight">\(a\in G\)</span> existe un elemento inverso (a ambos lados) <span class="math notranslate nohighlight">\(a^{-1}\in G\)</span> tal que <span class="math notranslate nohighlight">\(a^{-1} a = aa^{-1} = e\)</span>.</p>
+<p>Un semigrupo <span class="math notranslate nohighlight">\(G\)</span> es <strong>abeliano</strong> o <strong>conmutativo</strong> si su binaria operación es</p>
+<ol class="arabic simple" start="4">
+<li><p>conmutativa: <span class="math notranslate nohighlight">\(ab = ba\)</span> para todo <span class="math notranslate nohighlight">\(a, b\in G\)</span>.</p></li>
+</ol>
+<p>Nuestro principal interés son los grupos. Sin embargo, los semigrupos y los monoides son convenientes para enunciar ciertos teoremas con la mayor generalidad. A continuación se dan algunos ejemplos. El <strong>orden</strong> de un grupo <span class="math notranslate nohighlight">\(G\)</span> es el número cardinal <span class="math notranslate nohighlight">\(|G|\)</span>. Se dice que <span class="math notranslate nohighlight">\(G\)</span> es finito [resp. infinito] si <span class="math notranslate nohighlight">\(|G|\)</span> es finito [resp. infinito].</p>
+</div></blockquote>
+</div>
+<div class="section" id="teorema">
+<span id="propiedades-basicas-de-grupos"></span><h2><span class="section-number">1.2. </span>Teorema<a class="headerlink" href="#teorema" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si <span class="math notranslate nohighlight">\(G\)</span> es un monoide, entonces el elemento de identidad <span class="math notranslate nohighlight">\(e\)</span> es único. Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo, entonces</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(c \in G\)</span> y <span class="math notranslate nohighlight">\(cc = c \Rightarrow c = e\)</span>;</p></li>
+<li><p>para todo <span class="math notranslate nohighlight">\(a, b, c \in G : ab = ac \Rightarrow b = c\)</span> y <span class="math notranslate nohighlight">\(ba = ca \Rightarrow b = c\)</span> (cancelación a izquierda y a derecha);</p></li>
+<li><p>para cada <span class="math notranslate nohighlight">\(a \in G\)</span>, el elemento inverso <span class="math notranslate nohighlight">\(a^{-1}\)</span> es único;</p></li>
+<li><p>para cada <span class="math notranslate nohighlight">\(a \in G\)</span>, <span class="math notranslate nohighlight">\((a^{-1})^{-1} = a\)</span>;</p></li>
+<li><p>para <span class="math notranslate nohighlight">\(a, b \in G\)</span>, <span class="math notranslate nohighlight">\((ab)^{-1} = b^{-1}a^{-1}\)</span> ;</p></li>
+<li><p>para <span class="math notranslate nohighlight">\(a, b \in G\)</span> las ecuaciones <span class="math notranslate nohighlight">\(ax = b\)</span> y <span class="math notranslate nohighlight">\(ya = b\)</span> tienen soluciones únicas en <span class="math notranslate nohighlight">\(G\)</span>: <span class="math notranslate nohighlight">\(x = a^{-1}b\)</span> y <span class="math notranslate nohighlight">\(y = ba^{-1}\)</span>.</p></li>
+</ol>
+</div></blockquote>
+<p><strong>Prueba</strong>: Si <span class="math notranslate nohighlight">\(e'\)</span> es también una identidad a ambos lados, entonces <span class="math notranslate nohighlight">\(e = ee' = e'e = e'\)</span>.</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p><span class="math notranslate nohighlight">\(cc = c \Rightarrow c^{-1}(cc) = c^{-1}c \Rightarrow (c^{-1}c)c = c^{-1}c \Rightarrow ec = e \Rightarrow c = e\)</span>;</p></li>
+<li><p>para todo <span class="math notranslate nohighlight">\(a, b, c \in G\)</span>:</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    ab = ac &amp;\Rightarrow a^{-1}(ab) = a^{-1}(ac) \\
+            &amp;\Rightarrow (a^{-1}a)b = (a^{-1}a)c \\
+            &amp;\Rightarrow eb = ec \\
+            &amp;\Rightarrow b = c.
+\end{align}\end{split}\]</div>
+</div></blockquote>
+</li>
+</ol>
+<p>Análogamente se obtiene que <span class="math notranslate nohighlight">\(ba = ca \Rightarrow b = c\)</span>, por lo que se cumple la cancelativa a izquierda y a derecha;</p>
+<ol class="arabic simple" start="3">
+<li><p>para cada <span class="math notranslate nohighlight">\(a \in G\)</span>, supongamos que existen <span class="math notranslate nohighlight">\(a^{-1}\)</span> y <span class="math notranslate nohighlight">\(a^{\ast}\)</span> los elementos inversos <span class="math notranslate nohighlight">\(a\)</span>. Por definición de elemento inverso se deduce que, <span class="math notranslate nohighlight">\(aa^{-1} = e = aa^{\ast}\)</span>. Por propiedad cancelativa a izquierda, <span class="math notranslate nohighlight">\(a^{-1} = a^{\ast}\)</span>. Luego, el elemento inverso <span class="math notranslate nohighlight">\(a^{-1}\)</span> es único;</p></li>
+<li><p>para cada <span class="math notranslate nohighlight">\(a \in G\)</span>, <span class="math notranslate nohighlight">\(a^{-1}(a^{-1})^{-1} = e = a^{-1}a\)</span> y por cancelativa a izquierda tenemos que <span class="math notranslate nohighlight">\((a^{-1})^{-1} = a\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\((ab)(b^{-1}a^{-1} ) = a(bb^{-1})a^{-1} = (ae)a^{-1} = aa^{-1} = e \Rightarrow  (ab)^{-1} = b^{-1}a^{-1}\)</span> por ítem <span class="math notranslate nohighlight">\(3\)</span>.</p></li>
+<li><p>Análogamente al ítem <span class="math notranslate nohighlight">\(1\)</span>.</p></li>
+</ol>
+</div></blockquote>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(G\)</span> es un monoide y la operación binaria se escribe multiplicativamente, entonces el elemento identidad de <span class="math notranslate nohighlight">\(G\)</span> siempre se denotará como <span class="math notranslate nohighlight">\(e\)</span>.</p></li>
+<li><p>Si la operación binaria se escribe aditivamente, entonces <span class="math notranslate nohighlight">\(a+b\)</span> (<span class="math notranslate nohighlight">\(a,b \in G\)</span>) se llama la suma de <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span>, y el elemento identidad se denota como <span class="math notranslate nohighlight">\(=\)</span>;</p></li>
+<li><p>si <span class="math notranslate nohighlight">\(G\)</span> es un grupo, el inverso de <span class="math notranslate nohighlight">\(a \in G\)</span> se denota por <span class="math notranslate nohighlight">\(-a\)</span>. Escribimos <span class="math notranslate nohighlight">\(a - b\)</span> para <span class="math notranslate nohighlight">\(a + (-b)\)</span>. Los grupos abelianos se escriben con frecuencia de forma aditiva.</p></li>
+</ul>
+</div>
+<p>Los axiomas utilizados en la <a class="reference internal" href="#definicion-de-grupo"><span class="std std-ref">Definición de Grupo</span></a> pueden debilitarse considerablemente.</p>
+</div>
+<div class="section" id="proposicion">
+<span id="proposicion-de-semigrupo"></span><h2><span class="section-number">1.3. </span>Proposición<a class="headerlink" href="#proposicion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(G\)</span> un semigrupo. Entonces <span class="math notranslate nohighlight">\(G\)</span> es un grupo si y solo si se cumplen las siguientes condiciones:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((i)\)</span> existe un elemento <span class="math notranslate nohighlight">\(e\in G\)</span> tal que <span class="math notranslate nohighlight">\(ea = a\)</span> para todo <span class="math notranslate nohighlight">\(a\in G\)</span> (elemento de identidad izquierdo);</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> para cada <span class="math notranslate nohighlight">\(a \in G\)</span>, existe un elemento <span class="math notranslate nohighlight">\(a^{-1}\in G\)</span> tal que <span class="math notranslate nohighlight">\(a^{-1} a = e\)</span> (inverso a la izquierda).</p>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Un resultado análogo es válido para «inversos a derecha» y una «identidad izquierda».</p>
+</div>
+<p><strong>Bosquejo de la prueba</strong> de esta <a class="reference internal" href="#proposicion-de-semigrupo"><span class="std std-ref">Proposición</span></a>:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>(<span class="math notranslate nohighlight">\(\Rightarrow\)</span>) Trivial.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\Leftarrow\)</span>) Note que el ítem <span class="math notranslate nohighlight">\(1\)</span>. de la <a class="reference internal" href="#definicion-de-grupo"><span class="std std-ref">Definición de Grupo</span></a> es verdadero bajo estas hipótesis. <span class="math notranslate nohighlight">\(G \not = \emptyset\)</span> ya que <span class="math notranslate nohighlight">\(e\in G\)</span>. Si un <span class="math notranslate nohighlight">\(a\in G\)</span>, entonces por <span class="math notranslate nohighlight">\((ii)\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[(aa^{-1}) (aa^{-1}) = a (a^{-1}a)a^{-1} = a (ea^{-1}) = aa^{-1}\]</div>
+<p>y, por tanto, <span class="math notranslate nohighlight">\(aa^{-1} = e\)</span> según el ítem <span class="math notranslate nohighlight">\(1\)</span>. de la <a class="reference internal" href="#definicion-de-grupo"><span class="std std-ref">Definición de Grupo</span></a>. Así, <span class="math notranslate nohighlight">\(a^{-1}\)</span> es una inversa de dos lados de <span class="math notranslate nohighlight">\(a\)</span>. Dado que <span class="math notranslate nohighlight">\(ae = a (a^{-1}a) = (aa^{-1}) a = ea = a\)</span> para cada <span class="math notranslate nohighlight">\(a\in G\)</span>, <span class="math notranslate nohighlight">\(e\)</span> es una identidad de dos lados, por lo tanto <span class="math notranslate nohighlight">\(G\)</span> es un grupo según la <a class="reference internal" href="#definicion-de-grupo"><span class="std std-ref">Definición de Grupo</span></a>. <span class="math notranslate nohighlight">\(\blacksquare\)</span></p>
+</div></blockquote>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">1.4. </span>Proposición<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(G\)</span> un semigrupo. Entonces <span class="math notranslate nohighlight">\(G\)</span> es un grupo si y solo si para todo <span class="math notranslate nohighlight">\(a, b\in G\)</span> las ecuaciones <span class="math notranslate nohighlight">\(ax = b\)</span> y <span class="math notranslate nohighlight">\(ya = b\)</span> tienen soluciones en <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p><strong>Prueba.</strong> Ejercicio; utilice la <a class="reference internal" href="#proposicion-de-semigrupo"><span class="std std-ref">Proposición</span></a> anterior.</p>
+<div class="section" id="ejemplos">
+<h3><span class="section-number">1.4.1. </span>Ejemplos<a class="headerlink" href="#ejemplos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Los números enteros <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>, los números racionales <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> y los números reales <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> son cada uno grupos abelianos infinitos bajo adición ordinaria. Cada uno es un monoide bajo multiplicación ordinaria. pero no un grupo (<span class="math notranslate nohighlight">\(\mathbb{0}\)</span> no tiene inverso). Sin embargo, los elementos distintos de cero de <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> y <span class="math notranslate nohighlight">\(\mathbb{R}\)</span> forman respectivamente grupos abelianos infinitos bajo multiplicación.</p>
+<p>Los enteros pares bajo la multiplicación forman un semigrupo que no es un monoide.</p>
+</div>
+<div class="section" id="ejemplo-el-grupo-de-simetrias-del-triangulo">
+<h3><span class="section-number">1.4.2. </span>Ejemplo: el grupo de simetrías del triángulo<a class="headerlink" href="#ejemplo-el-grupo-de-simetrias-del-triangulo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Considere el triángulo con vértices numerados consecutivamente <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(2\)</span> y <span class="math notranslate nohighlight">\(3\)</span>, centro en el origen del plano <span class="math notranslate nohighlight">\(xy\)</span> y cuya base es paralela al eje <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Sea <span class="math notranslate nohighlight">\(D_3^{\ast}\)</span> el siguiente conjunto de «transformaciones» del triángulo dado por</p>
+<div class="math notranslate nohighlight">
+\[D_{3}^{\ast} = \{ R, R^{2}, I, T_{1}, T_{2}, T_{3} \},\]</div>
+<p>donde</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R\)</span> es una rotación en sentido antihorario alrededor del centro de <span class="math notranslate nohighlight">\(120^{\circ}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(R^{2}\)</span> una rotación en sentido antihorario de <span class="math notranslate nohighlight">\(240^{\circ}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(I\)</span> una rotación de <span class="math notranslate nohighlight">\(360^{\circ} (= 0^{\circ})\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{1}\)</span> es una reflexión sobre la recta que contiene a la altura del triángulo correspondiente al vértice <span class="math notranslate nohighlight">\(1\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{2}\)</span> es una reflexión sobre la recta que contiene a la altura del triángulo correspondiente al vértice <span class="math notranslate nohighlight">\(2\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{3}\)</span> es una reflexión sobre la recta que contiene a la altura del triángulo correspondiente al vértice <span class="math notranslate nohighlight">\(3\)</span>,</p></li>
+</ul>
+</div></blockquote>
+<a class="reference internal image-reference" href="../_images/triangulo.svg"><img alt="triangulo-con-vertices-numerados-consecutivamente" class="align-center" height="300px" src="../_images/triangulo.svg" width="100%" /></a>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Tengamos en cuenta que cada <span class="math notranslate nohighlight">\(U \in D_4^{\ast}\)</span> es una biyección del triángulo sobre sí mismo.</p>
+</div>
+<p>Definimos la <em>operación binaria</em> en <span class="math notranslate nohighlight">\(D_{3}^{\ast}\)</span> como composición de funciones:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>para <span class="math notranslate nohighlight">\(U, V \in D_3^{\ast}\)</span>, <span class="math notranslate nohighlight">\(U \circ V\)</span> es la transformación <span class="math notranslate nohighlight">\(V\)</span> seguida de la transformación <span class="math notranslate nohighlight">\(U\)</span>.</p></li>
+</ul>
+</div></blockquote>
+<p><span class="math notranslate nohighlight">\(D_{3}^{\ast}\)</span> es un grupo no abeliano de orden <span class="math notranslate nohighlight">\(6\)</span> llamado <strong>grupo de simetrías del triángulo</strong>.</p>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<p>Observemos que cada simetría (elemento de <span class="math notranslate nohighlight">\(D_{3}^{\ast}\)</span>) está completamente determinada por su acción sobre los vértices.</p>
+</div>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 14%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{3}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{3}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(T_{1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(T_{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ejemplo-el-grupo-de-simetrias-del-cuadrado">
+<h3><span class="section-number">1.4.3. </span>Ejemplo: el grupo de simetrías del cuadrado<a class="headerlink" href="#ejemplo-el-grupo-de-simetrias-del-cuadrado" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Considere el cuadrado con vértices numerados consecutivamente <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(2\)</span>, <span class="math notranslate nohighlight">\(3\)</span> y <span class="math notranslate nohighlight">\(4\)</span>, centro en el origen del plano <span class="math notranslate nohighlight">\(xy\)</span> y lados paralelos a los ejes.</p>
+<a class="reference internal image-reference" href="../_images/cuadrado.svg"><img alt="cuadrado-con-vertices-numerados-consecutivamente" class="align-center" height="150px" src="../_images/cuadrado.svg" width="50%" /></a>
+<p>Sea <span class="math notranslate nohighlight">\(D_4^{\ast}\)</span> el siguiente conjunto de «transformaciones» del cuadrado dado por</p>
+<div class="math notranslate nohighlight">
+\[D_4^{\ast} = \{ R, R^{2}, R^{3}, I, T_{x}, T_{y}, T_{1,3}, T_{2, 4} \},\]</div>
+<p>donde</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(R\)</span> es una rotación en sentido antihorario alrededor del centro de <span class="math notranslate nohighlight">\(90^{\circ}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(R^{2}\)</span> una rotación en sentido antihorario de <span class="math notranslate nohighlight">\(180^{\circ}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(R^{3}\)</span> una rotación en sentido antihorario de <span class="math notranslate nohighlight">\(270^{\circ}\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(I\)</span> una rotación de <span class="math notranslate nohighlight">\(360^{\circ} (= 0^{\circ})\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{x}\)</span> es una reflexión sobre el eje <span class="math notranslate nohighlight">\(x\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span> una reflexión sobre la diagonal que pasa por los vértices <span class="math notranslate nohighlight">\(1\)</span> y <span class="math notranslate nohighlight">\(3\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{y}\)</span> es una reflexión sobre el eje <span class="math notranslate nohighlight">\(y\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span> una reflexión sobre la diagonal que pasa por los vértices <span class="math notranslate nohighlight">\(2\)</span> y <span class="math notranslate nohighlight">\(4\)</span>;</p></li>
+</ul>
+</div></blockquote>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Tengamos en cuenta que cada <span class="math notranslate nohighlight">\(U \in D_4^{\ast}\)</span> es una biyección del cuadrado sobre sí mismo.</p>
+</div>
+<p>Definimos la <em>operación binaria</em> en <span class="math notranslate nohighlight">\(D_4^{\ast}\)</span> como composición de funciones:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>para <span class="math notranslate nohighlight">\(U, V \in D_4^{\ast}\)</span>, <span class="math notranslate nohighlight">\(U \circ V\)</span> es la transformación <span class="math notranslate nohighlight">\(V\)</span> seguida de la transformación <span class="math notranslate nohighlight">\(U\)</span>.</p></li>
+</ul>
+</div></blockquote>
+<p><span class="math notranslate nohighlight">\(D_4^{\ast}\)</span> es un grupo no abeliano de orden <span class="math notranslate nohighlight">\(8\)</span> llamado <strong>grupo de simetrías del cuadrado</strong>. Observemos que cada simetría (elemento de <span class="math notranslate nohighlight">\(D_4^{\ast}\)</span>) está completamente determinada por su acción sobre los vértices.</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+<col style="width: 11%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(\circ\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(R^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{3}\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{y}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{1,3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{x}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(T_{2,4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{3}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R^{2}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(R\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(I\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="ejemplo-el-grupo-de-permutaciones-de-un-conjunto">
+<h3><span class="section-number">1.4.4. </span>Ejemplo: el grupo de permutaciones de un conjunto<a class="headerlink" href="#ejemplo-el-grupo-de-permutaciones-de-un-conjunto" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(S\)</span> un conjunto no vacío y <span class="math notranslate nohighlight">\(A(S)\)</span> el conjunto de todas las biyecciones <span class="math notranslate nohighlight">\(S \to S\)</span>. Bajo la operación de composición de funciones, <span class="math notranslate nohighlight">\(f\circ g\)</span>, <span class="math notranslate nohighlight">\(A(S)\)</span> es un grupo, ya que la composición es asociativa, la composición de biyecciones es una biyección, Es una biyección, y toda biyección tiene una inversa. Los elementos de <span class="math notranslate nohighlight">\(A(S)\)</span> se llaman permutaciones y <span class="math notranslate nohighlight">\(A(S)\)</span> se llama grupo de permutaciones en el conjunto <span class="math notranslate nohighlight">\(S\)</span>. Si <span class="math notranslate nohighlight">\(S=\{1,2,3,\dots, n\}\)</span>, entonces <span class="math notranslate nohighlight">\(A(S)\)</span> se llama el grupo simétrico en <span class="math notranslate nohighlight">\(n\)</span> letras y denotado <span class="math notranslate nohighlight">\(S_{n}\)</span>. Verifique que <span class="math notranslate nohighlight">\(|S| = n!\)</span> (Ejercicio 5). Los grupos <span class="math notranslate nohighlight">\(S_{n}\)</span> juegan un papel importante en la teoría de grupos finitos.</p>
+<p>Dado que un elemento <span class="math notranslate nohighlight">\(\sigma\)</span> de <span class="math notranslate nohighlight">\(S_{n}\)</span> es una función en el conjunto finito <span class="math notranslate nohighlight">\(S=\{1,2,3,\dots, n\}\)</span>, se puede describir enumerando los elementos de <span class="math notranslate nohighlight">\(S_{n}\)</span> en una línea y la imagen de cada elemento debajo de <span class="math notranslate nohighlight">\(\sigma\)</span> directamente debajo de él: <span class="math notranslate nohighlight">\(\sigma = \left(\begin{smallmatrix}1 &amp; 2 &amp; 3 &amp; \cdots &amp; n-1 &amp; n \\i_{1} &amp; i_{2} &amp; i_{3} &amp; \cdots &amp;  i_{n-1}  &amp; i_{n}\end{smallmatrix}\right)\)</span>.</p>
+<p>El producto <span class="math notranslate nohighlight">\(\sigma\tau\)</span> de dos elementos de <span class="math notranslate nohighlight">\(S_{n}\)</span> es la función de composición <span class="math notranslate nohighlight">\(\tau\)</span> seguida de <span class="math notranslate nohighlight">\(\sigma\)</span>; es decir, la función sobre <span class="math notranslate nohighlight">\(S\)</span> dada por <span class="math notranslate nohighlight">\(k \mapsto \sigma(\tau(k))\)</span>. Por ejemplo, sean <span class="math notranslate nohighlight">\(\sigma = \left(\begin{smallmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \\3 &amp; 1 &amp; 2 &amp; 4\end{smallmatrix}\right)\)</span> y <span class="math notranslate nohighlight">\(\tau = \left(\begin{smallmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \\4 &amp; 1 &amp; 2 &amp; 3\end{smallmatrix}\right)\)</span> dos elementos de <span class="math notranslate nohighlight">\(S_{4}\)</span>. Entonces, bajo <span class="math notranslate nohighlight">\(\sigma\tau\)</span> tenemos que</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(1\mapsto\sigma\tau(1)=\sigma(\tau(1))=\sigma(4)=4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2\mapsto\sigma\tau(2)=\sigma(\tau(2))=\sigma(1)=3\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3\mapsto\sigma\tau(3)=\sigma(\tau(3))=\sigma(2)=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(4\mapsto\sigma\tau(4)=\sigma(\tau(4))=\sigma(3)=2\)</span></p></li>
+</ul>
+</div></blockquote>
+<p>entonces <span class="math notranslate nohighlight">\(\sigma\tau = \left(\begin{smallmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \\3 &amp; 1 &amp; 2 &amp; 4\end{smallmatrix}\right)\left(\begin{smallmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \\4 &amp; 1 &amp; 2 &amp; 3\end{smallmatrix}\right) = \left(\begin{smallmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \\4 &amp; 3 &amp; 1 &amp; 2\end{smallmatrix}\right)\)</span></p>
+<p>Del mismo modo, bajo <span class="math notranslate nohighlight">\(\tau\sigma\)</span> tenemos que</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(1\mapsto\tau\sigma(1)=\tau(\sigma(1))=\tau(3)=2\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(2\mapsto\tau\sigma(2)=\tau(\sigma(2))=\tau(1)=4\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(3\mapsto\tau\sigma(3)=\tau(\sigma(3))=\tau(2)=1\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(4\mapsto\tau\sigma(4)=\tau(\sigma(4))=\tau(4)=3\)</span></p></li>
+</ul>
+</div></blockquote>
+<p>entonces <span class="math notranslate nohighlight">\(\tau\sigma = \left(\begin{smallmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \\4 &amp; 1 &amp; 2 &amp; 3\end{smallmatrix}\right)\left(\begin{smallmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \\3 &amp; 1 &amp; 2 &amp; 4\end{smallmatrix}\right) = \left(\begin{smallmatrix} 1 &amp; 2 &amp; 3 &amp; 4 \\2 &amp; 4 &amp; 1 &amp; 3\end{smallmatrix}\right)\)</span></p>
+<p>Este ejemplo también muestra que <span class="math notranslate nohighlight">\(S_{n}\)</span> no necesita ser abeliano.</p>
+</div>
+<div class="section" id="ejemplo-el-producto-cartesiano-de-grupos">
+<h3><span class="section-number">1.4.5. </span>Ejemplo: el producto cartesiano de grupos<a class="headerlink" href="#ejemplo-el-producto-cartesiano-de-grupos" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Otra fuente de ejemplos es el siguiente método para construir nuevos grupos a partir de los antiguos. Sean <span class="math notranslate nohighlight">\(G\)</span> y <span class="math notranslate nohighlight">\(H\)</span> grupos con identidades <span class="math notranslate nohighlight">\(e_{G}\)</span> y <span class="math notranslate nohighlight">\(e_{H}\)</span> respectivamente. Definimos el <strong>producto cartesiano (o directo) de</strong> <span class="math notranslate nohighlight">\(G\)</span> <strong>y</strong> <span class="math notranslate nohighlight">\(H\)</span> como el grupo cuyo conjunto subyacente es <span class="math notranslate nohighlight">\(G\times H\)</span> y cuya operación binaria viene dada por:</p>
+<div class="math notranslate nohighlight">
+\[(a,b)(a',b') = (aa',bb'), \text{ donde } a,a' \in  G; b,b' \in H.\]</div>
+<p>Observe que hay tres operaciones diferentes en <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(H\)</span> y <span class="math notranslate nohighlight">\(G\times H\)</span> involucradas en esta última declaración.</p>
+<p>Es fácil verificar que</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(G\times H\)</span> es, de hecho, un grupo que es abeliano tanto si <span class="math notranslate nohighlight">\(G\)</span> como <span class="math notranslate nohighlight">\(G\)</span> lo son;</p></li>
+<li><p><span class="math notranslate nohighlight">\((e_{G},e_{H})\)</span> es la identidad y</p></li>
+<li><p><span class="math notranslate nohighlight">\((a^{-1},b^{-1})\)</span> la inversa de <span class="math notranslate nohighlight">\((a,b)\in G\times H\)</span>.</p></li>
+<li><p>Claramente <span class="math notranslate nohighlight">\(|G\times H|=|G||H|\)</span> (Introducción - que todavía no hice -, Definición 8.3).</p></li>
+</ul>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="teorema-de-relacion-de-equivalencia">
+<span id="id3"></span><h2><span class="section-number">1.5. </span>Teorema<a class="headerlink" href="#teorema-de-relacion-de-equivalencia" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(R\)</span> (<span class="math notranslate nohighlight">\(\sim\)</span>) una relación de equivalencia sobre un monoide <span class="math notranslate nohighlight">\(G\)</span> tal que <span class="math notranslate nohighlight">\(a_{1}\sim a_{2}\)</span> y <span class="math notranslate nohighlight">\(b_{1}\sim b_{2}\)</span> implican <span class="math notranslate nohighlight">\(a_{1}b_{1}\sim a_{2}b_{2}\)</span> para todo <span class="math notranslate nohighlight">\(a_{i}b_{i}\in G\)</span>. Entonces el conjunto <span class="math notranslate nohighlight">\(G / R\)</span> de todas las clases de equivalencia de <span class="math notranslate nohighlight">\(G\)</span> bajo <span class="math notranslate nohighlight">\(R\)</span> es un monoide bajo la operación binaria definida por <span class="math notranslate nohighlight">\((\overline{a})(\overline{b}) = \overline{ab}\)</span>, donde <span class="math notranslate nohighlight">\(\overline{x}\)</span> denota la clase de equivalencia de <span class="math notranslate nohighlight">\(x\in G\)</span>. Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo (abeliano), entonces <span class="math notranslate nohighlight">\(G / R\)</span> es un grupo.</p>
+<p>Una <strong>relación de equivalencia</strong> en un monoide <span class="math notranslate nohighlight">\(G\)</span> que satisface la hipótesis del teorema se llama <strong>relación de congruencia</strong> en <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p><strong>Prueba del</strong> <a class="reference internal" href="#teorema-de-relacion-de-equivalencia"><span class="std std-ref">Teorema</span></a>: Si <span class="math notranslate nohighlight">\(\overline{a_{1}} = \overline{a_{2}}\)</span> y <span class="math notranslate nohighlight">\(\overline{b_{1}} = \overline{b_{2}}\)</span> <span class="math notranslate nohighlight">\(\overline{a_{i}},\overline{b_{i}}\in G\)</span>, entonces <span class="math notranslate nohighlight">\(a_{1} \sim a_{2}\)</span> y <span class="math notranslate nohighlight">\(b_{1} \sim b_{2}\)</span> por (20) de la Introducción, Sección 4. Luego, por hipótesis <span class="math notranslate nohighlight">\(a_{1}b_{1}\sim a_{2}b_{2}\)</span> de modo que <span class="math notranslate nohighlight">\(\overline{a_{1}b_{1}} = \overline{a_{2}b_{2}}\)</span> de nuevo por (20). Por lo tanto, la operación binaria en <span class="math notranslate nohighlight">\(G / R\)</span> está bien definida (es decir, independiente de la ecuación de representantes de clase equivalentes).</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Es asociativo ya que <span class="math notranslate nohighlight">\(\overline{a} (\overline{b} \overline{c}) = \overline{a} (\overline{bc}) = \overline{a(bc)} = \overline{(ab)c} = \overline{(ab)}\overline{c} = (\overline{a}\overline{b})\overline{c}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\overline{e}\)</span> es el elemento de identidad ya que <span class="math notranslate nohighlight">\((\overline{a})(\overline{e}) = \overline{ae} = \overline{a} = \overline{ea} = (\overline{e})(\overline{a})\)</span>. Por tanto, <span class="math notranslate nohighlight">\(G / R\)</span> es un monoide.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo, entonces <span class="math notranslate nohighlight">\(\overline{a} \in G / R\)</span> claramente tiene una inversa <span class="math notranslate nohighlight">\(\overline{a^{-1}} \in G / R\)</span> ya que <span class="math notranslate nohighlight">\((\overline{a}) (\overline{a^{-1}}) = \overline{aa^{-1}} = \overline{e}\)</span> y <span class="math notranslate nohighlight">\((\overline{a^{-1}}) (\overline{a}) = \overline{a^{-1}a} = \overline{e}\)</span>. Por lo tanto, <span class="math notranslate nohighlight">\(G / R\)</span> también es un grupo.</p></li>
+<li><p>De manera similar, <span class="math notranslate nohighlight">\(G\)</span> abeliano implica <span class="math notranslate nohighlight">\((\overline{a}) (\overline{b}) = \overline{ab} = \overline{ba} = (\overline{b})(\overline{a})\)</span>. Por lo tanto, <span class="math notranslate nohighlight">\(G / R\)</span> abeliano. <span class="math notranslate nohighlight">\(\blacksquare\)</span></p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="ejemplo">
+<h3><span class="section-number">1.5.1. </span>Ejemplo<a class="headerlink" href="#ejemplo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sea <span class="math notranslate nohighlight">\(m\)</span> un entero fijo. La congruencia módulo <span class="math notranslate nohighlight">\(m\)</span> es una relación de congruencia en el grupo aditivo <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> por Introducción, Teorema 6.8. Sea <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span> el conjunto de clases de equivalencia de <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> bajo módulo de congruencia <span class="math notranslate nohighlight">\(m\)</span>. Según el <a class="reference internal" href="#teorema-de-relacion-de-equivalencia"><span class="std std-ref">Teorema</span></a> 1.5 (con notación aditiva) <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span> es un grupo abeliano, con la suma dada por <span class="math notranslate nohighlight">\(\overline{a} + \overline{b} = \overline{a + b}\)</span>, con <span class="math notranslate nohighlight">\(a,b\in\mathbb{Z}\)</span>.</p>
+<p>La demostración de la Introducción, Teorema 6.8 muestra que <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}=\{0,1,2,\dots, m-1\}\)</span> de modo que <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span> es un grupo finito de orden <span class="math notranslate nohighlight">\(m\)</span> bajo adición. <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span> se denomina grupo (aditivo) de números enteros módulo <span class="math notranslate nohighlight">\(m\)</span>. De manera similar, dado que <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> es un monoide conmutativo bajo multiplicación, y la congruencia módulo <span class="math notranslate nohighlight">\(m\)</span> también es una relación de congruencia con respecto a la multiplicación (Introducción, Teorema 6.8), <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span> es un monoide conmutativo, con la multiplicación dada por <span class="math notranslate nohighlight">\((\overline{a})(\overline{b}) = \overline{ab}\)</span> con <span class="math notranslate nohighlight">\(a,b \in \mathbb{Z}\)</span>. Verifique que para todo <span class="math notranslate nohighlight">\(\overline{a}, \overline{b}, \overline{c} \in \mathbb{Z}_{m}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \overline{a}(\overline{a} + \overline{a}) &amp;= \overline{a}\overline{a} + \overline{a}\overline{c} \text{ y }\\
+    (\overline{a} + \overline{b})\overline{c} &amp;= \overline{a}\overline{c} + \overline{b}\overline{c}.
+\end{align}\end{split}\]</div>
+<p>Además, si <span class="math notranslate nohighlight">\(p\)</span> es primo, los elementos distintos de cero de <span class="math notranslate nohighlight">\(\mathbb{Z}_{p}\)</span> forman un grupo multiplicativo de orden <span class="math notranslate nohighlight">\(p-1\)</span> (ejercicio 7). Es necesario denotar los elementos de <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span> como <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}=\{0,1,2,\dots, m-1\}\)</span> en lugar de <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}=\{\overline{0},\overline{1},\overline{2},\dots, \overline{m-1}\}\)</span>. En contexto, esta notación ambigua no causará dificultad y se utilizará siempre que sea conveniente.</p>
+</div>
+<div class="section" id="id4">
+<h3><span class="section-number">1.5.2. </span>Ejemplo<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>La siguiente relación sobre el grupo aditivo <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> de números racionales es una relación de congruencia (ejercicio 8):</p>
+<div class="math notranslate nohighlight">
+\[a\sim b \Longleftrightarrow a-b\in\mathbb{Z}\]</div>
+<p>Según el teorema 1.5, el conjunto de clases de equivalencia (denotado <span class="math notranslate nohighlight">\(\mathbb{Q} / \mathbb{Z}\)</span>) es un grupo abeliano (infinito), con la suma dada por <span class="math notranslate nohighlight">\(\overline{a} + \overline{b} = \overline{a+b}\)</span>. <span class="math notranslate nohighlight">\(\mathbb{Q} / \mathbb{Z}\)</span> se denomina grupo de racionales módulo uno.</p>
+<p>Dado <span class="math notranslate nohighlight">\(a_{1},\dots , a_{n}\in G (n&gt; 3)\)</span> es intuitivamente plausible que haya muchas formas de insertar paréntesis en la expresión <span class="math notranslate nohighlight">\(a_{1}a_{2}\dots a_{n}\)</span> para obtener un producto «significativo» en <span class="math notranslate nohighlight">\(G\)</span> de estos <span class="math notranslate nohighlight">\(n\)</span> elementos en este orden. Además, es plausible que dos de tales productos puedan probarse iguales mediante el uso repetido de la ley asociativa. Un requisito previo necesario para el estudio adicional de grupos y anillos es una declaración precisa y una prueba de estas conjeturas y otras relacionadas.</p>
+<p>Dada cualquier secuencia de elementos de un semigrupo <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(\{a_{1}, a_{2},\dots \}\)</span> definimos inductivamente un producto significativo de <span class="math notranslate nohighlight">\(a_{1},\dots, a_{n}\)</span> (en este orden) como sigue.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(n = 1\)</span>, el único producto significativo es al. Si <span class="math notranslate nohighlight">\(n&gt; 1\)</span>, entonces un producto significativo se define como cualquier producto de la forma <span class="math notranslate nohighlight">\((a_{1}\cdots a_{m}) (a_{m + 1}\cdots a_{n})\)</span> donde <span class="math notranslate nohighlight">\(m &lt; n\)</span> y <span class="math notranslate nohighlight">\((a_{1}\cdots a_{m})\)</span> y <span class="math notranslate nohighlight">\((a_{m + 1}\cdots a_{n})\)</span> son productos significativos de <span class="math notranslate nohighlight">\(m\)</span> y <span class="math notranslate nohighlight">\(n - m\)</span> elementos respectivamente.</p></li>
+<li><p>Tenga en cuenta que para cada <span class="math notranslate nohighlight">\(n &gt; 2\)</span> puede haber muchos productos significativos de <span class="math notranslate nohighlight">\(a_{1},\dots,a_{n}\)</span>.</p></li>
+<li><p>Para cada <span class="math notranslate nohighlight">\(n \in N^{\ast}\)</span> destacamos un producto significativo en particular definiendo inductivamente el producto <span class="math notranslate nohighlight">\(G\)</span> estándar como sigue:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\prod_{i=1}^{1} a_{1} = a_{1} \text{ y } \prod_{i=1}^{n} a_{i} = \left( \prod_{i=1}^{n-1} a_{i} \right)a_{n},\text{ para } n&gt;1.\]</div>
+<p>El hecho de que esta definición asigne para cada <span class="math notranslate nohighlight">\(n \in N^{\ast}\)</span> un elemento único de <span class="math notranslate nohighlight">\(G\)</span> (que es claramente un producto significativo) es una consecuencia del Teorema de Recursión 6.2 de la Introducción (Ejercicio 16).</p>
+</div></blockquote>
+</div>
+</div>
+<div class="section" id="teorema-ley-asociativa-generalizada">
+<span id="ley-asociativa-generalizada"></span><h2><span class="section-number">1.6. </span>Teorema (Ley Asociativa generalizada)<a class="headerlink" href="#teorema-ley-asociativa-generalizada" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si <span class="math notranslate nohighlight">\(G\)</span> es un semigrupo y <span class="math notranslate nohighlight">\((a_{1},a_{2},\dots a_{n})\in G\)</span> entonces cualesquiera dos productos significativos de <span class="math notranslate nohighlight">\((a_{1},a_{2}\dots, a_{n})\)</span> y en este orden son iguales.</p>
+<p><strong>Prueba.</strong> Usamos la inducción para mostrar que para cada n cualquier producto significativo <span class="math notranslate nohighlight">\(n\)</span> <span class="math notranslate nohighlight">\(a_{1}\cdots a_{n}\)</span> es igual al producto <span class="math notranslate nohighlight">\(n\)</span> estándar <span class="math notranslate nohighlight">\(\prod_{i=1}^{n} a_{i}\)</span>. Esto ciertamente es cierto para <span class="math notranslate nohighlight">\(n =1, 2\)</span>.</p>
+<p>Si <span class="math notranslate nohighlight">\(n &gt; 2\)</span>, entonces por definición <span class="math notranslate nohighlight">\(a_{1}\cdots a_{n}=(a_{1}\cdots a_{m}) (a_{m + 1}\cdots a_{n})\)</span> para algunos <span class="math notranslate nohighlight">\(m &lt; n\)</span>.</p>
+<p>Por tanto, por inducción y asociatividad:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    a_{1}\cdots a_{n} &amp;= (a_{1}\cdots a_{m}) (a_{m + 1}\cdots a_{n})\\
+                      &amp;= \left( \prod_{i=1}^{m} a_{i} \right) \left( \prod_{i=1}^{n-m} a_{m+i} \right)\\
+                      &amp;= \left( \prod_{i=1}^{m} a_{i} \right) \left( \left( \prod_{i=1}^{n-m-1} a_{m+i} \right) a_{n} \right)\\
+                      &amp;= \left( \left( \prod_{i=1}^{m} a_{i} \right) \left( \prod_{i=1}^{n-m-1} a_{m+i} \right) \right) a_{n} \\
+                      &amp;= \left( \prod_{i=1}^{n-1} a_{i} \right) a_{n} \\
+                      &amp;= \prod_{i=1}^{n} a_{i}
+\end{align}\end{split}\]</div>
+<p>En vista del <a class="reference internal" href="#ley-asociativa-generalizada"><span class="std std-ref">Teorema (Ley Asociativa generalizada)</span></a>, podemos escribir y escribimos cualquier producto significativo de <span class="math notranslate nohighlight">\(a_{1},a_{2}\cdots a_{n}\in G\)</span> sin paréntesis ni ambigüedad.</p>
+</div>
+<div class="section" id="corolario-ley-conmutativa-generalizada">
+<h2><span class="section-number">1.7. </span>Corolario (Ley conmutativa generalizada)<a class="headerlink" href="#corolario-ley-conmutativa-generalizada" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si <span class="math notranslate nohighlight">\(G\)</span> es un semigrupo conmutativo y <span class="math notranslate nohighlight">\(a_{1},a_{2},\dots, a_{n}\in G\)</span>, entonces para cualquier permutación <span class="math notranslate nohighlight">\(i_{1},i_{2},\dots, i_{n}\)</span> de <span class="math notranslate nohighlight">\(1,2,\dots, n\)</span>, <span class="math notranslate nohighlight">\(a_{1}a_{2}\cdots a_{n} = a_{i_{1}}a_{i_{2}}\cdots a_{i_{n}}\)</span></p>
+<p>Prueba. Ejercicio. <span class="math notranslate nohighlight">\(\blacksquare\)</span></p>
+</div>
+<div class="section" id="definicion">
+<span id="producto-n-estandar"></span><h2><span class="section-number">1.8. </span>Definición<a class="headerlink" href="#definicion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(G\)</span> un semigrupo, <span class="math notranslate nohighlight">\(a \in G\)</span> y <span class="math notranslate nohighlight">\(n \in N^{\ast}\)</span>. El elemento <span class="math notranslate nohighlight">\(a^{n} \in G\)</span> se define como el producto <span class="math notranslate nohighlight">\(n\)</span> estándar <span class="math notranslate nohighlight">\(\prod_{i=1}^{n} a_{i}\)</span> con <span class="math notranslate nohighlight">\(ai = a\)</span> para <span class="math notranslate nohighlight">\(1 \leq i \leq n\)</span>. Si <span class="math notranslate nohighlight">\(G\)</span> es un monoide, <span class="math notranslate nohighlight">\(a^{0}\)</span> es definido como el elemento idetidad <span class="math notranslate nohighlight">\(e\)</span>. Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo, entonces para cada <span class="math notranslate nohighlight">\(n \in N^{\ast}\)</span> se define <span class="math notranslate nohighlight">\(a^{-n}\)</span> como <span class="math notranslate nohighlight">\((a^{-1})^n\in G\)</span>.</p>
+<p>Las observaciones que preceden al <a class="reference internal" href="#ley-asociativa-generalizada"><span class="std std-ref">Teorema (Ley Asociativa generalizada)</span></a> y al Ejercicio 16 muestran que la exponenciación está bien definida. Por definición, entonces, <span class="math notranslate nohighlight">\(a^{1} = a\)</span>, <span class="math notranslate nohighlight">\(a^{2} = aa\)</span>, <span class="math notranslate nohighlight">\(a^{2} = (aa)a= aaa\)</span>,… , <span class="math notranslate nohighlight">\(a^{n} = a^{n-1}a=aa\cdots a\)</span> (<span class="math notranslate nohighlight">\(n\)</span> factores). Tenga en cuenta que podemos tener <span class="math notranslate nohighlight">\(a^{m} = a^{n}\)</span> con <span class="math notranslate nohighlight">\(m \not = n\)</span> (por ejemplo, en <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>, <span class="math notranslate nohighlight">\(-1 = i^{2} = i^{6}\)</span>).</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si la operación binaria en <span class="math notranslate nohighlight">\(G\)</span> se escribe aditivamente, entonces escribimos <span class="math notranslate nohighlight">\(na\)</span> en lugar de <span class="math notranslate nohighlight">\(a^{n}\)</span>. Por tanto, <span class="math notranslate nohighlight">\(0a = 0\)</span>, <span class="math notranslate nohighlight">\(1a = a\)</span>, <span class="math notranslate nohighlight">\(na = (n-1)a+a\)</span>, etc.</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">1.9. </span>Teorema<a class="headerlink" href="#id5" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo [resp. semigrupo, monoide] y <span class="math notranslate nohighlight">\(a\in G\)</span>, entonces para todo <span class="math notranslate nohighlight">\(m, n \in \mathbb{Z}\)</span> [resp. <span class="math notranslate nohighlight">\(\mathbb{N}^{\ast}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{N}\)</span>]:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\((a^{-1})^{n} = a^{-n}\)</span> (notación aditiva: <span class="math notranslate nohighlight">\(m(-a) = -(ma)\)</span>);</p></li>
+<li><p><span class="math notranslate nohighlight">\(a^{m}a^{n} = a^{m+n}\)</span> (notación aditiva: <span class="math notranslate nohighlight">\(ma + na = (m + n)a\)</span>);</p></li>
+<li><p><span class="math notranslate nohighlight">\((a^{m})^{n} = a^{mn}\)</span> (notación aditiva: <span class="math notranslate nohighlight">\(n(ma) = mna\)</span>).</p></li>
+</ol>
+</div></blockquote>
+<p><strong>Bosquejo de la prueba</strong>:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>Verifique que <span class="math notranslate nohighlight">\((a^{-1})^{n} = a^{-n}\)</span> para todo <span class="math notranslate nohighlight">\(n\in \mathbb{N}\)</span> y que <span class="math notranslate nohighlight">\((a^{-1})^{n} = a^{-n}\)</span> para todo <span class="math notranslate nohighlight">\(n\in \mathbb{Z}\)</span>.</p></li>
+<li><p>es verdadero para <span class="math notranslate nohighlight">\(m &gt; 0\)</span> y <span class="math notranslate nohighlight">\(n &gt; 0\)</span> ya que el producto de un producto estándar <span class="math notranslate nohighlight">\(n\)</span> y un producto estándar <span class="math notranslate nohighlight">\(m\)</span> es un producto significativo igual al producto estándar (m + n) según el <a class="reference internal" href="#ley-asociativa-generalizada"><span class="std std-ref">Teorema (Ley Asociativa generalizada)</span></a>. Para <span class="math notranslate nohighlight">\(m &lt; 0\)</span> y <span class="math notranslate nohighlight">\(n &lt; 0\)</span>, reemplace <span class="math notranslate nohighlight">\(a\)</span>, <span class="math notranslate nohighlight">\(m\)</span>, <span class="math notranslate nohighlight">\(n\)</span> por <span class="math notranslate nohighlight">\(a^{-1}\)</span>, <span class="math notranslate nohighlight">\(-m\)</span>, <span class="math notranslate nohighlight">\(-n\)</span>  y use el argumento anterior. El caso <span class="math notranslate nohighlight">\(m = 0\)</span> 0 <span class="math notranslate nohighlight">\(n = 0\)</span> es trivial y los casos <span class="math notranslate nohighlight">\(m &lt; 0\)</span>, <span class="math notranslate nohighlight">\(n &gt; 0\)</span> y <span class="math notranslate nohighlight">\(m &gt; 0\)</span>, <span class="math notranslate nohighlight">\(n &lt; 0\)</span> se manejan por inducción en <span class="math notranslate nohighlight">\(m\)</span> y <span class="math notranslate nohighlight">\(n\)</span> respectivamente.</p></li>
+<li><p>es trivial si <span class="math notranslate nohighlight">\(m = 0\)</span>. El caso en el que <span class="math notranslate nohighlight">\(m &gt; 0\)</span> y <span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span> se demuestra por inducción sobre <span class="math notranslate nohighlight">\(m\)</span>. Utilice este resultado para probar el caso <span class="math notranslate nohighlight">\(m &lt; 0\)</span> y <span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span>.</p></li>
+</ol>
+</div></blockquote>
+</div>
+<div class="section" id="ejercicios">
+<h2><span class="section-number">1.10. </span>Ejercicios<a class="headerlink" href="#ejercicios" title="Enlazar permanentemente con este título">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Dar ejemplos distintos a los del texto de semigrupos y monoides que no sean grupos.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo (escrito de forma aditiva), <span class="math notranslate nohighlight">\(S\)</span> un conjunto no vacío y <span class="math notranslate nohighlight">\(M (S, G)\)</span> el conjunto de todas las funciones <span class="math notranslate nohighlight">\(f: S \rightarrow G\)</span>. Se define la suma en <span class="math notranslate nohighlight">\(M (S, G)\)</span> de la siguiente manera:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\((f + g) : S \rightarrow G\)</span> viene dado por <span class="math notranslate nohighlight">\(s \mapsto f (s) + g (s) \in G\)</span>.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<p>Demuestre que <span class="math notranslate nohighlight">\(M (S, G)\)</span> es un grupo, que es abeliano si <span class="math notranslate nohighlight">\(G\)</span> lo es.</p>
+<ol class="arabic" start="3">
+<li><p>¿Es cierto que un semigrupo que tiene un elemento de identidad a la izquierda y en el que cada elemento tiene un inverso a la derecha (ver <a class="reference internal" href="#proposicion-de-semigrupo"><span class="std std-ref">Proposición</span></a> 1.3) es un grupo?.</p></li>
+<li><p>Escribir una tabla de multiplicar para el grupo <span class="math notranslate nohighlight">\(D_{3}^{\ast}\)</span> y <span class="math notranslate nohighlight">\(D_{4}^{\ast}\)</span>.</p></li>
+<li><p>Demuestre que el grupo simétrico de <span class="math notranslate nohighlight">\(n\)</span> letras, <span class="math notranslate nohighlight">\(\mathbb{S}_{n}\)</span>, tiene orden <span class="math notranslate nohighlight">\(n!\)</span>.</p></li>
+<li><p>Escriba una tabla de suma para <span class="math notranslate nohighlight">\(\mathbb{Z}_{2}\oplus\mathbb{Z}_{2}\)</span>. <span class="math notranslate nohighlight">\(\mathbb{Z}_{2}\oplus\mathbb{Z}_{2}\)</span> se llama <strong>el grupo de cuatro de Klein</strong>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(p\)</span> es primo, entonces los elementos distintos de cero de <span class="math notranslate nohighlight">\(\mathbb{Z}_{p}\)</span> forman un grupo de orden <span class="math notranslate nohighlight">\(p-1\)</span> bajo la multiplicación. [Sugerencia: <span class="math notranslate nohighlight">\(\overline{a}\not = \overline{0} \Rightarrow (a, p) = 1\)</span>; use la Introducción, Teorema 6.5.] Demuestre que este enunciado es falso si <span class="math notranslate nohighlight">\(p\)</span> no es primo.</p></li>
+<li><p><span class="math notranslate nohighlight">\((a)\)</span> La relación dada por <span class="math notranslate nohighlight">\(a\sim b \Longleftrightarrow a-b\in\mathbb{Z}\)</span> es una relación de congruencia en el grupo aditivo <span class="math notranslate nohighlight">\(\mathbb{Q}\)</span> [ver <a class="reference internal" href="#teorema-de-relacion-de-equivalencia"><span class="std std-ref">Teorema</span></a> 1.5].</p>
+<p><span class="math notranslate nohighlight">\((b)\)</span> El conjunto <span class="math notranslate nohighlight">\(\mathbb{Q}/\mathbb{Z}\)</span> de clases de equivalencia es un grupo abeliano infinito.</p>
+</li>
+<li><ul class="simple">
+<li><p>Sea <span class="math notranslate nohighlight">\(p\)</span> un primo fijo. Sea <span class="math notranslate nohighlight">\(\mathbb{R}_{p}\)</span> el conjunto de todos aquellos números racionales cuyo denominador es primo relativo a <span class="math notranslate nohighlight">\(p\)</span>.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(\mathbb{R}^{p}\)</span> el conjunto de racionales cuyo denominador es una potencia de <span class="math notranslate nohighlight">\(p\)</span> (<span class="math notranslate nohighlight">\(p^{i}, i \geq 0\)</span>).</p></li>
+</ul>
+</li>
+</ol>
+<p>Demuestre que tanto <span class="math notranslate nohighlight">\(\mathbb{R}_{p}\)</span> como <span class="math notranslate nohighlight">\(\mathbb{R}^{p}\)</span> son grupos abelianos bajo la adición ordinaria de racionales.</p>
+<ol class="arabic simple" start="10">
+<li><p>Sea <span class="math notranslate nohighlight">\(p\)</span> un primo y sea <span class="math notranslate nohighlight">\(\mathbb{Z}(p^{\infty})\)</span> el siguiente subconjunto del grupo <span class="math notranslate nohighlight">\(\mathbb{Q}/\mathbb{Z}\)</span> (ver la página 27):</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\mathbb{Z}(p^{\infty}) = \{ \overline{a/b} \in \mathbb{Q}/\mathbb{Z}| a,b \in \mathbb{Z} \text{ y } b = p^{i} \text{ para algún } i \geq 0 \}.\)</span></p></li>
+</ul>
+</li>
+</ol>
+<p>Muestre que <span class="math notranslate nohighlight">\(\mathbb{Z}(p^{\infty})\)</span> es un grupo infinito bajo la operación de suma de <span class="math notranslate nohighlight">\(\mathbb{Q}/\mathbb{Z}\)</span>.</p>
+<ol class="arabic" start="11">
+<li><p>Las siguientes condiciones en un grupo <span class="math notranslate nohighlight">\(G\)</span> son equivalentes:</p>
+<p><span class="math notranslate nohighlight">\((i)\)</span> <span class="math notranslate nohighlight">\(G\)</span> es abeliano;</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <span class="math notranslate nohighlight">\((ab)^{2}=a^{2}b^{2}\)</span> para todo <span class="math notranslate nohighlight">\(a, b \in G\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((iii)\)</span> <span class="math notranslate nohighlight">\((ab)^{-1}=a^{-1}b^{-1}\)</span> para todo <span class="math notranslate nohighlight">\(a, b \in G\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((iv)\)</span> <span class="math notranslate nohighlight">\((ab)^{n}=a^{n}b^{n}\)</span> para todo <span class="math notranslate nohighlight">\(n \in \mathbb{Z}\)</span> y todo <span class="math notranslate nohighlight">\(a, b \in G\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((v)\)</span> <span class="math notranslate nohighlight">\((ab)^{n}=a^{n}b^{n}\)</span> para tres enteros consecutivos <span class="math notranslate nohighlight">\(n\)</span> y todo <span class="math notranslate nohighlight">\(a, b \in G\)</span>.</p>
+</li>
+</ol>
+<p>Demuestre que <span class="math notranslate nohighlight">\((v) \Rightarrow (i)\)</span> es falso si «tres» se reemplaza por «dos».</p>
+<ol class="arabic simple" start="12">
+<li><p>Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo, <span class="math notranslate nohighlight">\(a,b\in G\)</span> y <span class="math notranslate nohighlight">\(bab^{-1} = a^{r}\)</span> para algún <span class="math notranslate nohighlight">\(r \in \mathbb{N}\)</span>, entonces <span class="math notranslate nohighlight">\(b^{j}ab^{-j} = a^{r^{j}}\)</span> para todo <span class="math notranslate nohighlight">\(j \in \mathbb{N}\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(a^{2} = e\)</span> para todos los elementos <span class="math notranslate nohighlight">\(a\)</span> de un grupo <span class="math notranslate nohighlight">\(G\)</span>, entonces <span class="math notranslate nohighlight">\(G\)</span> es abeliano.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo finito de orden par, entonces <span class="math notranslate nohighlight">\(G\)</span> contiene un elementos <span class="math notranslate nohighlight">\(a \not= e\)</span> tal que <span class="math notranslate nohighlight">\(a^{2} = e\)</span>.</p></li>
+<li><p>Sea  un conjunto finito no vacío con una operación binaria asociativa tal que para todo <span class="math notranslate nohighlight">\(a, b, c \in G\)</span> <span class="math notranslate nohighlight">\(ab = ac\Rightarrow b = c\)</span> y <span class="math notranslate nohighlight">\(ba = ca \Rightarrow b = c\)</span>. Entonces <span class="math notranslate nohighlight">\(G\)</span> es un grupo. Demuestre que esta conclusión puede ser falsa si <span class="math notranslate nohighlight">\(G\)</span> es infinito.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(a_{1}, a_{2}, \dots\)</span> una secuencia de elementos en un semigrupo <span class="math notranslate nohighlight">\(G\)</span>. Entonces existe una función única <span class="math notranslate nohighlight">\(\psi:\mathbb{N}^{\ast} \rightarrow G\)</span> tal que <span class="math notranslate nohighlight">\(\psi(1)=a_{1}\)</span>, <span class="math notranslate nohighlight">\(\psi(2)=a_{1}a_{2}\)</span>, <span class="math notranslate nohighlight">\(\psi(2)=(a_{1}a_{2})a_{3}\)</span> y para <span class="math notranslate nohighlight">\(n\geq 1\)</span>, <span class="math notranslate nohighlight">\(\psi(n+1)=(\psi(n))a_{n+1}\)</span>. Tenga en cuenta que <span class="math notranslate nohighlight">\(\psi(n)\)</span> es precisamente el <span class="math notranslate nohighlight">\(n\)</span> producto estándar <span class="math notranslate nohighlight">\(\displaystyle\prod_{i=1}^{n}a_{i}\)</span>. [Sugerencia: aplicando el teorema de recursividad 6.2 de la introducción con <span class="math notranslate nohighlight">\(a = a_{i}\)</span>, <span class="math notranslate nohighlight">\(S = G\)</span> y <span class="math notranslate nohighlight">\(f_{n}:G\to G\)</span> dado por <span class="math notranslate nohighlight">\(x \mapsto xa_{n + 2}\)</span> produce una función <span class="math notranslate nohighlight">\(\phi: \mathbb{N}\to G\)</span>. Sea <span class="math notranslate nohighlight">\(\psi = \phi\theta\)</span>, donde <span class="math notranslate nohighlight">\(\theta:\mathbb{N}^{\ast}\to\mathbb{N}\)</span> viene dado por <span class="math notranslate nohighlight">\(k\mapsto k - 1\)</span>.]</p></li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="02-homomorfismos-y-subgrupos.html" class="btn btn-neutral float-right" title="2. Homomorfismos y Subgrupos" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Teoría de Grupos con aplicaciones en GAP" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2021, Ferreira, Juan David.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

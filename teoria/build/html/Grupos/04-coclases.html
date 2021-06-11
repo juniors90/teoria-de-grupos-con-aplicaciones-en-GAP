@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>4. Coclases &mdash; documentación de Teoría de Grupos con aplicaciones en GAP - 0.0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="5. Normalidad, Grupo Cociente y Homomorfismos" href="05-normalidad-grupo-cociente-y-homomorfismos.html" />
+    <link rel="prev" title="3. Grupos Cíclicos" href="03-grupos-ciclicos.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Teoría de Grupos con aplicaciones en GAP
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Grupo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01-semigrupos-monoides-y-grupos.html">1. Semigrupos, Monoides y Grupos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-homomorfismos-y-subgrupos.html">2. Homomorfismos y Subgrupos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03-grupos-ciclicos.html">3. Grupos Cíclicos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. Coclases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definicion">4.1. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#teorema">4.2. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#corolario">4.3. Corolario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">4.4. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">4.5. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ejercicios">4.6. Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="05-normalidad-grupo-cociente-y-homomorfismos.html">5. Normalidad, Grupo Cociente y Homomorfismos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-grupo-simetrico-alternante-dihedral.html">6. Grupo Simétrico, Alternante y Dihedral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-categorias-productos-coproductos-y-objetos-libres.html">7. Categorias: Productos, Coproductos y Objetos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-productos-directos-y-sumas-directas.html">8. Productos directos y Sumas directas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-grupos-libres-productos-libres-generadores-y-relaciones.html">9. Grupos Libres, Productos Libres, Generadores y Relaciones</a></li>
+</ul>
+<p class="caption"><span class="caption-text">La estructura de Grupo:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/01-grupos-abelianos-libres.html">1. Grupos Abelianos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/02-grupos-abelianos-finitamente-generados.html">2. Grupos Abelianos Finitamente Generados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/03-el-teorema-de-krull-schmidt.html">3. El Teorema de Krull-Schmidt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/04-la-accion-de-un-grupo-sobre-un-conjunto.html">4. La Acción de un Grupo sobre un Conjunto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/05-los-teoremas-de-sylow.html">5. Los Teoremas de Sylow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/06-clasificacion-de-grupos-finitos.html">6. Clasificación de Grupos Finitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/07-grupo-nilpotente-y-solubles.html">7. Grupo Nilpotente y Soluble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/08-serie-normal-y-subnormal.html">8. Serie Normal y Subnormal</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Teoría de Grupos con aplicaciones en GAP</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">4. </span>Coclases</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Grupos/04-coclases.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="coclases">
+<h1><span class="section-number">4. </span>Coclases<a class="headerlink" href="#coclases" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>En este apartado obtenemos los primeros teoremas significativos que relacionan la estructura de un grupo finito <span class="math notranslate nohighlight">\(G\)</span> con las propiedades teóricas numéricas de su orden <span class="math notranslate nohighlight">\(|G|\)</span>. Comenzamos extendiendo el concepto de congruencia módulo <span class="math notranslate nohighlight">\(m\)</span> en el grupo <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>. Por definición <span class="math notranslate nohighlight">\(a \equiv b (mod~m)\)</span> si y solo si <span class="math notranslate nohighlight">\(m | a - b\)</span>, es decir, si y solo si <span class="math notranslate nohighlight">\(a - b\)</span> es un elemento del subgrupo <span class="math notranslate nohighlight">\(\langle m \rangle= \{mk | k \in \mathbb{Z} \}\)</span>. De manera más general (y en notación multiplicativa) tenemos</p>
+<div class="section" id="definicion">
+<h2><span class="section-number">4.1. </span>Definición<a class="headerlink" href="#definicion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(H &lt; G\)</span> y <span class="math notranslate nohighlight">\(a, b \in G\)</span>, decimos que:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a\)</span> es congruente a la derecha de <span class="math notranslate nohighlight">\(b\)</span> módulo <span class="math notranslate nohighlight">\(H\)</span> si <span class="math notranslate nohighlight">\(ab^{-1} \in H\)</span>. Lo denotamos <span class="math notranslate nohighlight">\(a \equiv_{r} b (mod~H)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(a\)</span> es congruente a la izquierda de <span class="math notranslate nohighlight">\(b\)</span> módulo <span class="math notranslate nohighlight">\(H\)</span> si <span class="math notranslate nohighlight">\(a^{-1}b \in H\)</span>. Lo denotamos <span class="math notranslate nohighlight">\(a \equiv_{l} b (mod~H)\)</span>.</p></li>
+</ul>
+</div></blockquote>
+<p>Si <span class="math notranslate nohighlight">\(G\)</span> es abeliano, entonces la congruencia derecha e izquierda módulo <span class="math notranslate nohighlight">\(H\)</span> coinciden (ya que <span class="math notranslate nohighlight">\(ab^{-1} \in H \Leftrightarrow (ab^{-1})^{-1} \in H\)</span> y <span class="math notranslate nohighlight">\((ab^{-1})^{-1}=(b^{-1})^{-1}a^{-1}=ba^{-1}\)</span>. También existen grupos no abelianos <span class="math notranslate nohighlight">\(G\)</span> y subgrupos <span class="math notranslate nohighlight">\(H\)</span> tal que coinciden la congruencia derecha e izquierda (Sección 5), pero esto no es cierto en general.</p>
+</div>
+<div class="section" id="teorema">
+<span id="teorema-de-congruencia-a-derecha"></span><h2><span class="section-number">4.2. </span>Teorema<a class="headerlink" href="#teorema" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo tal que <span class="math notranslate nohighlight">\(H &lt; G\)</span>.</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((i)\)</span> La congruencia a derecha [resp. a izquierda] <span class="math notranslate nohighlight">\(H\)</span> es una relación de equivalencia en <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> La clase de equivalencia de <span class="math notranslate nohighlight">\(a\in G\)</span> vía la congruencia a derecho [resp. a izquierda] módulo <span class="math notranslate nohighlight">\(H\)</span> es el conjunto</p>
+<div class="math notranslate nohighlight">
+\[Ha = \{ha | h \in H \} \text{ [resp. } aH = \{ah | h \in H\}\text{]}.\]</div>
+<p><span class="math notranslate nohighlight">\((iii)\)</span> <span class="math notranslate nohighlight">\(|Ha| = |H| = |aH|\)</span> para todo <span class="math notranslate nohighlight">\(a \in G\)</span>.</p>
+</div></blockquote>
+<div class="admonition important">
+<p class="admonition-title">Importante</p>
+<ul class="simple">
+<li><p>El conjunto <span class="math notranslate nohighlight">\(Ha = \{ha | h \in H \}\)</span> se llama <em>clase lateral derecha de</em> <span class="math notranslate nohighlight">\(H\)</span> <em>en</em> <span class="math notranslate nohighlight">\(G\)</span></p></li>
+<li><p>El conjunto <span class="math notranslate nohighlight">\(aH = \{ah | h \in H \}\)</span> se llama <em>clase lateral izquierda de</em> <span class="math notranslate nohighlight">\(H\)</span> <em>en</em> <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+<li><p>En general, no es el caso de que una clase lateral derecha sea también una clase lateral izquierda (ejercicio 2).</p></li>
+</ul>
+</div>
+<p><strong>Prueba del</strong> <a class="reference internal" href="#teorema-de-congruencia-a-derecha"><span class="std std-ref">Teorema</span></a> <strong>4.2</strong>. Escribimos <span class="math notranslate nohighlight">\(a \equiv b\)</span> para <span class="math notranslate nohighlight">\(a \equiv_{r} b (mod~H)\)</span> y probamos el teorema de congruencia a derecha y clases laterales a derecha. Se aplican argumentos análogos para la congruencia a izquierda.</p>
+<p><span class="math notranslate nohighlight">\((i)\)</span> Sean <span class="math notranslate nohighlight">\(a, b, c \in G\)</span>.</p>
+<blockquote>
+<div><ul>
+<li><p><strong>Reflexiva</strong>: <span class="math notranslate nohighlight">\(a \equiv a\)</span> ya que <span class="math notranslate nohighlight">\(aa^{-1}=e\in H\)</span>.</p></li>
+<li><p><strong>Simétrica</strong>: como</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[a \equiv b \Rightarrow ab^{-1}\in H \Rightarrow (ab^{-1})^{-1} \in H \Rightarrow ba^{-1} \in H \Rightarrow b \equiv a.\]</div>
+</div></blockquote>
+</li>
+<li><p><strong>Transitiva</strong>: veamos que se cumple que <span class="math notranslate nohighlight">\(a \equiv b\)</span> y <span class="math notranslate nohighlight">\(b \equiv a\)</span> entonces <span class="math notranslate nohighlight">\(a \equiv c\)</span>.</p></li>
+</ul>
+<p>Ahora bien, si <span class="math notranslate nohighlight">\(a \equiv b\)</span> y <span class="math notranslate nohighlight">\(b \equiv a\)</span> entonces <span class="math notranslate nohighlight">\(ab^{-1} \in H\)</span> y <span class="math notranslate nohighlight">\(bc^{-1} \in H\)</span>. Luego, tenemos que</p>
+<div class="math notranslate nohighlight">
+\[ac^{-1} = (ab^{-1})(bc^{-1}) \in H.\]</div>
+<p>Así, <span class="math notranslate nohighlight">\(a \equiv c\)</span>, que es lo que debíamos probar.</p>
+<p>Entonces, la congruencia a derecha [resp. a izquierda] <span class="math notranslate nohighlight">\(H\)</span> es una relación de equivalencia en <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</div></blockquote>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> Sea <span class="math notranslate nohighlight">\(C_{r}(a)\)</span> la clase de equivalencia de <span class="math notranslate nohighlight">\(a \in G\)</span> entonces</p>
+<blockquote>
+<div><div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    b \in C_{r}(a) &amp;\Leftrightarrow a \equiv b                                                  \\
+                   &amp;\Leftrightarrow ab^{-1} \in H \Leftrightarrow \exists h \in H : ab^{-1} = h \\
+                   &amp;\Leftrightarrow b = h^{-1}a \Leftrightarrow b \in Ha
+\end{align}\end{split}\]</div>
+<p>En conclusión, <span class="math notranslate nohighlight">\(C_{r}(a) = Ha\)</span>.</p>
+</div></blockquote>
+<p><span class="math notranslate nohighlight">\((iii)\)</span> Sea <span class="math notranslate nohighlight">\(\varphi : H \to Ha\)</span> dado por <span class="math notranslate nohighlight">\(\varphi(a) = ha\)</span> entonces <span class="math notranslate nohighlight">\(\varphi\)</span> tiene inversa <span class="math notranslate nohighlight">\(\varphi' : Ha \to H\)</span> dada por <span class="math notranslate nohighlight">\(\varphi'(a) = (ha)a^{-1}\)</span> y tal que</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    \varphi\circ\varphi' &amp;= Id_{Ha} &amp;&amp;&amp; \varphi'\circ\varphi &amp;= Id_{H}
+\end{align}\]</div>
+<p>Luego, <span class="math notranslate nohighlight">\(|H| = |Ha|\)</span>. <span class="math notranslate nohighlight">\(\blacksquare\)</span></p>
+</div>
+<div class="section" id="corolario">
+<span id="corolario-4-3"></span><h2><span class="section-number">4.3. </span>Corolario<a class="headerlink" href="#corolario" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo tal que <span class="math notranslate nohighlight">\(H &lt; G\)</span>.</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((i)\)</span> <span class="math notranslate nohighlight">\(G = \displaystyle\bigcup_{a \in G} Ha = \displaystyle\bigcup_{a \in G} aH\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <span class="math notranslate nohighlight">\(Ha =  Hb\)</span> o <span class="math notranslate nohighlight">\(Ha \cap  Hb = \emptyset\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((iii)\)</span> Para todo <span class="math notranslate nohighlight">\(a, b \in G\)</span>, <span class="math notranslate nohighlight">\(Ha =  Hb \Leftrightarrow ab^{-1} \in H\)</span> y <span class="math notranslate nohighlight">\(aH =  bH \Leftrightarrow a^{-1}b \in H\)</span>.</p>
+</div></blockquote>
+<p><strong>Notación aditiva</strong>. Si <span class="math notranslate nohighlight">\(H\)</span> es un subgrupo de un grupo aditivo, entonces la congruencia módulo a derecha <span class="math notranslate nohighlight">\(H\)</span> se define por: <span class="math notranslate nohighlight">\(a \equiv_{r} b (mod~H) \Leftrightarrow a - b \in G\)</span>. La clase de equivalencia de <span class="math notranslate nohighlight">\(a \in G\)</span> es la clase lateral a derecha <span class="math notranslate nohighlight">\(H + a = \{h + a | h \in H\}\)</span>; de manera similar para la congruencia a izquierda y las clases laterales a izquierdas.</p>
+</div>
+<div class="section" id="id1">
+<h2><span class="section-number">4.4. </span>Definición<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(H\)</span> un subgrupo de un grupo <span class="math notranslate nohighlight">\(G\)</span>. El índice de <span class="math notranslate nohighlight">\(H\)</span> en <span class="math notranslate nohighlight">\(G\)</span>, lo denotamos <span class="math notranslate nohighlight">\([G: H]\)</span>, es el número cardinal del conjunto de distintas clases laterales a derechas [resp. a izquierda] de <span class="math notranslate nohighlight">\(H\)</span> en <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p>En vista del <a class="reference internal" href="#corolario-4-3"><span class="std std-ref">Corolario</span></a> 4.3 <span class="math notranslate nohighlight">\((iv)\)</span>, <span class="math notranslate nohighlight">\([G: H]\)</span> no depende de si se utilizan las clases laterales derecha o izquierda en la definición. Nuestro interés principal está en el caso en que <span class="math notranslate nohighlight">\([G: H]\)</span> es finito, lo que puede ocurrir incluso cuando <span class="math notranslate nohighlight">\(H\)</span> y <span class="math notranslate nohighlight">\(G\)</span> son grupos infinitos (por ejemplo, <span class="math notranslate nohighlight">\([\mathbb{Z}: \langle m \rangle] = m\)</span> por Introducción, Teorema 6.8 <span class="math notranslate nohighlight">\((i)\)</span>. Nota que si <span class="math notranslate nohighlight">\(H = \langle e \rangle\)</span>, entonces <span class="math notranslate nohighlight">\(Ha = \{a\}\)</span> para cada <span class="math notranslate nohighlight">\(a \in G\)</span> y <span class="math notranslate nohighlight">\([G: H] = |G|\)</span>.</p>
+<p>Un conjunto completo de representantes de clases laterales derechas de un subgrupo <span class="math notranslate nohighlight">\(H\)</span> en un grupo <span class="math notranslate nohighlight">\(G\)</span> es un conjunto <span class="math notranslate nohighlight">\(\left( a_{i} \right)_{i\in I}\)</span> que consta precisamente de un elemento de cada clase lateral derecha de <span class="math notranslate nohighlight">\(H\)</span> en <span class="math notranslate nohighlight">\(G\)</span> y en <span class="math notranslate nohighlight">\(G = \displaystyle\bigsqcup_{i \in I} Ha_{i}\)</span>. Claramente, el conjunto <span class="math notranslate nohighlight">\(\{ a_{i} \}\)</span> tiene cardinalidad <span class="math notranslate nohighlight">\([G: H]\)</span>. Tenga en cuenta que dicho conjunto contiene exactamente un elemento de <span class="math notranslate nohighlight">\(H\)</span> ya que <span class="math notranslate nohighlight">\(H = He\)</span> es en sí mismo una clase lateral derecha. Se aplican afirmaciones análogas a las clases laterales izquierdas.</p>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">4.5. </span>Teorema<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si <span class="math notranslate nohighlight">\(K\)</span>, <span class="math notranslate nohighlight">\(H\)</span>, <span class="math notranslate nohighlight">\(G\)</span> son grupos con <span class="math notranslate nohighlight">\(K &lt; H &lt; G\)</span>, entonces <span class="math notranslate nohighlight">\([G: K] = [G: H][H: K]\)</span>. Si dos de estos índices son finitos, también lo es el tercero.</p>
+</div>
+<div class="section" id="ejercicios">
+<h2><span class="section-number">4.6. </span>Ejercicios<a class="headerlink" href="#ejercicios" title="Enlazar permanentemente con este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo y <span class="math notranslate nohighlight">\(\{ H_{i} | i \in I \}\)</span> una familia de subgrupos de <span class="math notranslate nohighlight">\(G\)</span>. Entonces, para todo <span class="math notranslate nohighlight">\(a \in G\)</span>, <span class="math notranslate nohighlight">\(\left( \displaystyle\bigcap_{i \in I} H_{i} \right) a = \displaystyle\bigcap_{i \in I} H_{i}a\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\((a)\)</span> Sea <span class="math notranslate nohighlight">\(H\)</span> el subgrupo cíclico (de orden <span class="math notranslate nohighlight">\(2\)</span>) de <span class="math notranslate nohighlight">\(\mathbb{S}_{3}\)</span> generado por <span class="math notranslate nohighlight">\(\left( \begin{matrix} 1 &amp; 2 &amp; 3 \\ 2 &amp; 1 &amp; 3 \end{matrix} \right)\)</span>. Entonces, ninguna clase lateral izquierda de <span class="math notranslate nohighlight">\(H\)</span> (excepto la propia <span class="math notranslate nohighlight">\(H\)</span>) es también una clase lateral derecha. Existe <span class="math notranslate nohighlight">\(a \in \mathbb{S}_{3}\)</span> tal que <span class="math notranslate nohighlight">\(aH \cap Ha = \{ a \}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((b)\)</span> Si <span class="math notranslate nohighlight">\(K\)</span> es el subgrupo cíclico (de orden <span class="math notranslate nohighlight">\(3\)</span>) de <span class="math notranslate nohighlight">\(\mathbb{S}_{3}\)</span> generado por <span class="math notranslate nohighlight">\(\left( \begin{matrix} 1 &amp; 2 &amp; 3 \\ 2 &amp; 3 &amp; 1 \end{matrix} \right)\)</span> entonces cada clase lateral izquierda de <span class="math notranslate nohighlight">\(K\)</span> es también una clase lateral derecha de <span class="math notranslate nohighlight">\(K\)</span>.</p>
+</li>
+<li><p>Las siguientes condiciones en un grupo finito <span class="math notranslate nohighlight">\(G\)</span> son equivalentes.</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((i)\)</span> <span class="math notranslate nohighlight">\(|G|\)</span> es primo.</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <span class="math notranslate nohighlight">\(G \not = \langle e \rangle\)</span> y <span class="math notranslate nohighlight">\(G\)</span> no tiene subgrupos propios.</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <span class="math notranslate nohighlight">\(G \cong \mathbb{Z}_{p}\)</span> para algunos prime <span class="math notranslate nohighlight">\(p\)</span>.</p>
+</div></blockquote>
+</li>
+<li><p>(Euler-Fermat) Sea <span class="math notranslate nohighlight">\(a\)</span> un número entero y <span class="math notranslate nohighlight">\(p\)</span> un primo tal que <span class="math notranslate nohighlight">\(p \not | a\)</span>. Entonces a <span class="math notranslate nohighlight">\(a^{p - 1} \equiv 1 (mod~p)\)</span>. [Sugerencia: considere <span class="math notranslate nohighlight">\(\overline{a} \in \mathbb{Z}_{p}\)</span> y el grupo multiplicativo de elementos distintos de cero de <span class="math notranslate nohighlight">\(\mathbb{Z}_{p}\)</span>; Ver Ejercicio 1.7.]. De ello se deduce que <span class="math notranslate nohighlight">\(a^{p} \equiv a (mod~p)\)</span> para cualquier número entero <span class="math notranslate nohighlight">\(a\)</span>.</p></li>
+<li><p>Demuestrar que solo hay dos grupos distintos de orden <span class="math notranslate nohighlight">\(4\)</span> (hasta el isomorfismo), es decir, <span class="math notranslate nohighlight">\(\mathbb{Z}_{4}\)</span> y <span class="math notranslate nohighlight">\(\mathbb{Z}_{2} \oplus \mathbb{Z}_{2}\)</span>. [Sugerencia: según el Teorema de Lagrange 4.6 , un grupo de orden <span class="math notranslate nohighlight">\(4\)</span> que no es cíclico debe constar de una identidad y tres elementos de orden <span class="math notranslate nohighlight">\(2\)</span>.]</p></li>
+<li><p>Sean <span class="math notranslate nohighlight">\(H\)</span> y <span class="math notranslate nohighlight">\(K\)</span> subgrupos de un grupo <span class="math notranslate nohighlight">\(G\)</span>. Entonces <span class="math notranslate nohighlight">\(HK\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(G\)</span> si y solo si <span class="math notranslate nohighlight">\(HK = KH\)</span>.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo de orden <span class="math notranslate nohighlight">\(p^{k}m\)</span>, con <span class="math notranslate nohighlight">\(p\)</span> primo y <span class="math notranslate nohighlight">\((p, m) = 1\)</span>. Sea <span class="math notranslate nohighlight">\(H\)</span> un subgrupo de orden <span class="math notranslate nohighlight">\(p^{k}\)</span> y <span class="math notranslate nohighlight">\(K\)</span> un subgrupo de orden <span class="math notranslate nohighlight">\(p^{d}\)</span>, con <span class="math notranslate nohighlight">\(0 &lt; d \leq k\)</span> y <span class="math notranslate nohighlight">\(K\not \subset H\)</span>. Demuestre que <span class="math notranslate nohighlight">\(HK\)</span> no es un subgrupo de <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(H\)</span> y <span class="math notranslate nohighlight">\(K\)</span> son subgrupos de índice finito de un grupo <span class="math notranslate nohighlight">\(G\)</span> tales que <span class="math notranslate nohighlight">\([G: H]\)</span> y <span class="math notranslate nohighlight">\([G: K]\)</span> son ​​primos relativos, entonces <span class="math notranslate nohighlight">\(G = HK\)</span>.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo tal que <span class="math notranslate nohighlight">\(H, K, N \lhd G\)</span> y <span class="math notranslate nohighlight">\(H &lt; N\)</span>, entonces <span class="math notranslate nohighlight">\(HK \cap N = H (K \cap N)\)</span>.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo tal que <span class="math notranslate nohighlight">\(H, K, N \lhd G\)</span>, <span class="math notranslate nohighlight">\(H &lt; N\)</span>, <span class="math notranslate nohighlight">\(H \cap N = K \cap N\)</span> y <span class="math notranslate nohighlight">\(HN = KN\)</span>. Demuestre que <span class="math notranslate nohighlight">\(H = K\)</span>.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo de orden <span class="math notranslate nohighlight">\(2n\)</span> entonces <span class="math notranslate nohighlight">\(G\)</span> contiene un elemento de orden <span class="math notranslate nohighlight">\(2\)</span>. Si <span class="math notranslate nohighlight">\(n\)</span> es impar y <span class="math notranslate nohighlight">\(G\)</span> abeliano, solo hay un elemento de orden <span class="math notranslate nohighlight">\(2\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(H\)</span> y <span class="math notranslate nohighlight">\(K\)</span> son subgrupos de un grupo <span class="math notranslate nohighlight">\(G\)</span>, entonces <span class="math notranslate nohighlight">\([H \vee K: H] \geq [K: H \cap K]\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(p &gt; q\)</span> son primos, un grupo de orden <span class="math notranslate nohighlight">\(pq\)</span> tiene como máximo un subgrupo de orden <span class="math notranslate nohighlight">\(p\)</span>. [Sugerencia: Suponer que <span class="math notranslate nohighlight">\(H\)</span>, <span class="math notranslate nohighlight">\(K\)</span> son subgrupos distintos de orden <span class="math notranslate nohighlight">\(p\)</span>. Mostrar que <span class="math notranslate nohighlight">\(H \cap K = \langle e \rangle\)</span>; Utilizar el ejercicio 12 para obtener una contradicción.]</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo y <span class="math notranslate nohighlight">\(a, b \in G\)</span> tal que</p>
+<p><span class="math notranslate nohighlight">\((i)\)</span> <span class="math notranslate nohighlight">\(|a| = 4 = |b|\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <span class="math notranslate nohighlight">\(a^{2} = b^{2}\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((iii)\)</span> <span class="math notranslate nohighlight">\(ba = a^{3}b = a^{-1}b\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((iv)\)</span> <span class="math notranslate nohighlight">\(a \not = b\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((v)\)</span> <span class="math notranslate nohighlight">\(G = \langle a, b \rangle\)</span>.</p>
+</li>
+</ol>
+<p>Muestre que <span class="math notranslate nohighlight">\(|G| = 8\)</span> y <span class="math notranslate nohighlight">\(G \cong Q_{8}\)</span>. [Ver el ejercicio 2.3; observe que los generadores <span class="math notranslate nohighlight">\(A\)</span>, <span class="math notranslate nohighlight">\(B\)</span> de <span class="math notranslate nohighlight">\(Q_{8}\)</span> también satisfacen <span class="math notranslate nohighlight">\((i)\)</span> - <span class="math notranslate nohighlight">\((v)\)</span>.]</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="05-normalidad-grupo-cociente-y-homomorfismos.html" class="btn btn-neutral float-right" title="5. Normalidad, Grupo Cociente y Homomorfismos" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="03-grupos-ciclicos.html" class="btn btn-neutral float-left" title="3. Grupos Cíclicos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2021, Ferreira, Juan David.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

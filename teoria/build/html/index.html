@@ -1,0 +1,323 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Teoría de Grupos con aplicaciones en GAP &mdash; documentación de Teoría de Grupos con aplicaciones en GAP - 0.0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="1. Semigrupos, Monoides y Grupos" href="Grupos/01-semigrupos-monoides-y-grupos.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="#" class="icon icon-home"> Teoría de Grupos con aplicaciones en GAP
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Grupo:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html">1. Semigrupos, Monoides y Grupos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html">2. Homomorfismos y Subgrupos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/03-grupos-ciclicos.html">3. Grupos Cíclicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/04-coclases.html">4. Coclases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/05-normalidad-grupo-cociente-y-homomorfismos.html">5. Normalidad, Grupo Cociente y Homomorfismos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/06-grupo-simetrico-alternante-dihedral.html">6. Grupo Simétrico, Alternante y Dihedral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/07-categorias-productos-coproductos-y-objetos-libres.html">7. Categorias: Productos, Coproductos y Objetos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/08-productos-directos-y-sumas-directas.html">8. Productos directos y Sumas directas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/09-grupos-libres-productos-libres-generadores-y-relaciones.html">9. Grupos Libres, Productos Libres, Generadores y Relaciones</a></li>
+</ul>
+<p class="caption"><span class="caption-text">La estructura de Grupo:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/01-grupos-abelianos-libres.html">1. Grupos Abelianos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/02-grupos-abelianos-finitamente-generados.html">2. Grupos Abelianos Finitamente Generados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/03-el-teorema-de-krull-schmidt.html">3. El Teorema de Krull-Schmidt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/04-la-accion-de-un-grupo-sobre-un-conjunto.html">4. La Acción de un Grupo sobre un Conjunto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/05-los-teoremas-de-sylow.html">5. Los Teoremas de Sylow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/06-clasificacion-de-grupos-finitos.html">6. Clasificación de Grupos Finitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/07-grupo-nilpotente-y-solubles.html">7. Grupo Nilpotente y Soluble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/08-serie-normal-y-subnormal.html">8. Serie Normal y Subnormal</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Teoría de Grupos con aplicaciones en GAP</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Teoría de Grupos con aplicaciones en GAP</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/index.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="teoria-de-grupos-con-aplicaciones-en-gap">
+<h1>Teoría de Grupos con aplicaciones en GAP<a class="headerlink" href="#teoria-de-grupos-con-aplicaciones-en-gap" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Grupo:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html">1. Semigrupos, Monoides y Grupos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#definicion-de-grupo">1.1. Definición de Grupo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#teorema">1.2. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#proposicion">1.3. Proposición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#id2">1.4. Proposición</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#ejemplos">1.4.1. Ejemplos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#ejemplo-el-grupo-de-simetrias-del-triangulo">1.4.2. Ejemplo: el grupo de simetrías del triángulo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#ejemplo-el-grupo-de-simetrias-del-cuadrado">1.4.3. Ejemplo: el grupo de simetrías del cuadrado</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#ejemplo-el-grupo-de-permutaciones-de-un-conjunto">1.4.4. Ejemplo: el grupo de permutaciones de un conjunto</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#ejemplo-el-producto-cartesiano-de-grupos">1.4.5. Ejemplo: el producto cartesiano de grupos</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#teorema-de-relacion-de-equivalencia">1.5. Teorema</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#ejemplo">1.5.1. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#id4">1.5.2. Ejemplo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#teorema-ley-asociativa-generalizada">1.6. Teorema (Ley Asociativa generalizada)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#corolario-ley-conmutativa-generalizada">1.7. Corolario (Ley conmutativa generalizada)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#definicion">1.8. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#id5">1.9. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/01-semigrupos-monoides-y-grupos.html#ejercicios">1.10. Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html">2. Homomorfismos y Subgrupos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#definicion">2.1. Definición</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#ejemplo">2.1.1. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id1">2.1.2. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id2">2.1.3. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id3">2.1.4. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id4">2.1.5. Ejemplo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id5">2.2. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#teorema">2.3. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#definicion-de-subgrupo">2.4. Definición</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id7">2.4.1. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id8">2.4.2. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id9">2.4.3. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id10">2.4.4. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id11">2.4.5. Ejemplo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id12">2.5. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#corolario">2.6. Corolario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id13">2.7. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#id14">2.8. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#ejemplos">2.9. Ejemplos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/02-homomorfismos-y-subgrupos.html#ejercicios">2.10. Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/03-grupos-ciclicos.html">3. Grupos Cíclicos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/03-grupos-ciclicos.html#teorema">3.1. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/03-grupos-ciclicos.html#teorema-grupo-ciclico-segun-el-orden">3.2. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/03-grupos-ciclicos.html#definicion">3.3. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/03-grupos-ciclicos.html#id2">3.4. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/03-grupos-ciclicos.html#id3">3.5. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/03-grupos-ciclicos.html#id4">3.6. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/03-grupos-ciclicos.html#ejercicios">3.7. Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/04-coclases.html">4. Coclases</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/04-coclases.html#definicion">4.1. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/04-coclases.html#teorema">4.2. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/04-coclases.html#corolario">4.3. Corolario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/04-coclases.html#id1">4.4. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/04-coclases.html#id2">4.5. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Grupos/04-coclases.html#ejercicios">4.6. Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/05-normalidad-grupo-cociente-y-homomorfismos.html">5. Normalidad, Grupo Cociente y Homomorfismos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/06-grupo-simetrico-alternante-dihedral.html">6. Grupo Simétrico, Alternante y Dihedral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/07-categorias-productos-coproductos-y-objetos-libres.html">7. Categorias: Productos, Coproductos y Objetos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/08-productos-directos-y-sumas-directas.html">8. Productos directos y Sumas directas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Grupos/09-grupos-libres-productos-libres-generadores-y-relaciones.html">9. Grupos Libres, Productos Libres, Generadores y Relaciones</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">La estructura de Grupo:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/01-grupos-abelianos-libres.html">1. Grupos Abelianos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/02-grupos-abelianos-finitamente-generados.html">2. Grupos Abelianos Finitamente Generados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/03-el-teorema-de-krull-schmidt.html">3. El Teorema de Krull-Schmidt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/04-la-accion-de-un-grupo-sobre-un-conjunto.html">4. La Acción de un Grupo sobre un Conjunto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/05-los-teoremas-de-sylow.html">5. Los Teoremas de Sylow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/06-clasificacion-de-grupos-finitos.html">6. Clasificación de Grupos Finitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/07-grupo-nilpotente-y-solubles.html">7. Grupo Nilpotente y Soluble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Estructura/08-serie-normal-y-subnormal.html">8. Serie Normal y Subnormal</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="Grupos/01-semigrupos-monoides-y-grupos.html" class="btn btn-neutral float-right" title="1. Semigrupos, Monoides y Grupos" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2021, Ferreira, Juan David.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

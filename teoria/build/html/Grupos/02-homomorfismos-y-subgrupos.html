@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>2. Homomorfismos y Subgrupos &mdash; documentación de Teoría de Grupos con aplicaciones en GAP - 0.0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="3. Grupos Cíclicos" href="03-grupos-ciclicos.html" />
+    <link rel="prev" title="1. Semigrupos, Monoides y Grupos" href="01-semigrupos-monoides-y-grupos.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Teoría de Grupos con aplicaciones en GAP
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Grupo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01-semigrupos-monoides-y-grupos.html">1. Semigrupos, Monoides y Grupos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Homomorfismos y Subgrupos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#definicion">2.1. Definición</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#ejemplo">2.1.1. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">2.1.2. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">2.1.3. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">2.1.4. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2.1.5. Ejemplo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">2.2. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#teorema">2.3. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definicion-de-subgrupo">2.4. Definición</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id7">2.4.1. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">2.4.2. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">2.4.3. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">2.4.4. Ejemplo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id11">2.4.5. Ejemplo</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id12">2.5. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#corolario">2.6. Corolario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id13">2.7. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id14">2.8. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ejemplos">2.9. Ejemplos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ejercicios">2.10. Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03-grupos-ciclicos.html">3. Grupos Cíclicos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04-coclases.html">4. Coclases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-normalidad-grupo-cociente-y-homomorfismos.html">5. Normalidad, Grupo Cociente y Homomorfismos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-grupo-simetrico-alternante-dihedral.html">6. Grupo Simétrico, Alternante y Dihedral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-categorias-productos-coproductos-y-objetos-libres.html">7. Categorias: Productos, Coproductos y Objetos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-productos-directos-y-sumas-directas.html">8. Productos directos y Sumas directas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-grupos-libres-productos-libres-generadores-y-relaciones.html">9. Grupos Libres, Productos Libres, Generadores y Relaciones</a></li>
+</ul>
+<p class="caption"><span class="caption-text">La estructura de Grupo:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/01-grupos-abelianos-libres.html">1. Grupos Abelianos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/02-grupos-abelianos-finitamente-generados.html">2. Grupos Abelianos Finitamente Generados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/03-el-teorema-de-krull-schmidt.html">3. El Teorema de Krull-Schmidt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/04-la-accion-de-un-grupo-sobre-un-conjunto.html">4. La Acción de un Grupo sobre un Conjunto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/05-los-teoremas-de-sylow.html">5. Los Teoremas de Sylow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/06-clasificacion-de-grupos-finitos.html">6. Clasificación de Grupos Finitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/07-grupo-nilpotente-y-solubles.html">7. Grupo Nilpotente y Soluble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/08-serie-normal-y-subnormal.html">8. Serie Normal y Subnormal</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Teoría de Grupos con aplicaciones en GAP</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">2. </span>Homomorfismos y Subgrupos</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Grupos/02-homomorfismos-y-subgrupos.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="homomorfismos-y-subgrupos">
+<h1><span class="section-number">2. </span>Homomorfismos y Subgrupos<a class="headerlink" href="#homomorfismos-y-subgrupos" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Lo esencial para el estudio de cualquier clase de objetos algebraicos son las funciones que preservan la estructura algebraica dada en el siguiente sentido.</p>
+<div class="section" id="definicion">
+<h2><span class="section-number">2.1. </span>Definición<a class="headerlink" href="#definicion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sean <span class="math notranslate nohighlight">\(G\)</span> y <span class="math notranslate nohighlight">\(H\)</span> semigrupos. Una función <span class="math notranslate nohighlight">\(f: G \to H\)</span> es un homomorfismo proporcionado</p>
+<div class="math notranslate nohighlight">
+\[f(ab) = f(a)f(b) \text{ para todo } a,b \in G.\]</div>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(f\)</span> es <em>inyectiva</em> como un mapa de conjuntos, se dice que <span class="math notranslate nohighlight">\(f\)</span> es un <strong>monomorfismo</strong>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f\)</span> es <em>sobreyectiva</em>, <span class="math notranslate nohighlight">\(f\)</span> se llama <strong>epimorfismo</strong>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f\)</span> es <em>biyectiva</em>, <span class="math notranslate nohighlight">\(f\)</span> se llama <strong>isomorfismo</strong>. En este caso, se dice que <span class="math notranslate nohighlight">\(G\)</span> y <span class="math notranslate nohighlight">\(H\)</span> son isomorfos (denotado por <span class="math notranslate nohighlight">\(G\cong H)\)</span>.</p></li>
+<li><p>Un homomorfismo <span class="math notranslate nohighlight">\(f: G \to G\)</span> se denomina endomorfismo de <span class="math notranslate nohighlight">\(G\)</span> y un isomorfismo <span class="math notranslate nohighlight">\(f: G \to G\)</span> se denomina automorfismo de <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(f: G \to H\)</span> y <span class="math notranslate nohighlight">\(g: H \to K\)</span> son homomorfismos de semigrupos, es fácil ver que <span class="math notranslate nohighlight">\(g f: G \to K\)</span> es también un homomorfismo.</p></li>
+<li><p>La composición de los monomorfismos es un monomorfismo;</p></li>
+<li><p>La composición de los epimorfismos es un epimorfismos;</p></li>
+<li><p>La composición de los isomorfismos es un isomorfismo;</p></li>
+<li><p>La composición de los automorfismos es un automorfismo;</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(G\)</span> y <span class="math notranslate nohighlight">\(H\)</span> son grupos con identidades <span class="math notranslate nohighlight">\(e_{G}\)</span> y <span class="math notranslate nohighlight">\(e_{H}\)</span> respectivamente y <span class="math notranslate nohighlight">\(f: G \to H \)</span>; sin embargo, <strong>esto no es cierto para los monoides</strong> (ejercicio 1).</p></li>
+<li><p>Además <span class="math notranslate nohighlight">\(f (a^{-1}) = f(a)^{-1}\)</span> para todo <span class="math notranslate nohighlight">\(a \in G\)</span> (ejercicio 1).</p></li>
+</ul>
+</div>
+<div class="section" id="ejemplo">
+<h3><span class="section-number">2.1.1. </span>Ejemplo<a class="headerlink" href="#ejemplo" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El mapa <span class="math notranslate nohighlight">\(f: \mathbb{Z}\to \mathbb{Z}_{m}\)</span> dado por <span class="math notranslate nohighlight">\(x\mapsto \overline{x}\)</span> (es decir, cada número entero se asigna a su clase de equivalencia en <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span>) es un epimorfismo de grupos aditivos. <span class="math notranslate nohighlight">\(f\)</span> es el epimorfismo canónico de <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> sobre <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span>. De manera similar, el mapa <span class="math notranslate nohighlight">\(g: \mathbb{Q}\to \mathbb{Q}/\mathbb{Z}\)</span> dado por <span class="math notranslate nohighlight">\(r\mapsto r\)</span> también es un epimorfismo de grupos aditivos.</p>
+</div>
+<div class="section" id="id1">
+<h3><span class="section-number">2.1.2. </span>Ejemplo<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Si <span class="math notranslate nohighlight">\(A\)</span> es un grupo abeliano, entonces el mapa dado por <span class="math notranslate nohighlight">\(a\mapsto a^{-1}\)</span> es un automorfismo de <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<div class="section" id="id2">
+<h3><span class="section-number">2.1.3. </span>Ejemplo<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Si <span class="math notranslate nohighlight">\(A\)</span> es un grupo abeliano, entonces el mapa dado por <span class="math notranslate nohighlight">\(a\mapsto a^{2}\)</span> es un endomorfismo de <span class="math notranslate nohighlight">\(A\)</span>.</p>
+</div>
+<div class="section" id="id3">
+<h3><span class="section-number">2.1.4. </span>Ejemplo<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Sean <span class="math notranslate nohighlight">\(m &gt; 1\)</span>, <span class="math notranslate nohighlight">\(k \in \mathbb{N}^{\ast}\)</span>. El mapa <span class="math notranslate nohighlight">\(g : \mathbb{Z}_{m}\to \mathbb{Z}_{mk}\)</span> dada por  <span class="math notranslate nohighlight">\(\overline{x} \mapsto \overline{kx}\)</span> es un monomorfismo.</p>
+</div>
+<div class="section" id="id4">
+<h3><span class="section-number">2.1.5. </span>Ejemplo<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Dados los grupos <span class="math notranslate nohighlight">\(G\)</span> y <span class="math notranslate nohighlight">\(H\)</span>, hay cuatro homomorfismos:</p>
+<div class="math notranslate nohighlight">
+\[G \underset{\iota_{1}}{\overset{\pi_{1}}{\leftrightarrows}} G\times H \underset{\iota_{2}}{\overset{\pi_{2}}{\rightleftarrows}} H\]</div>
+<p>dadas por</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\iota_{1}(g) = (g,e)\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\iota_{2}(h) = (e,h)\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\pi_{1}(g,h) = g\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(\pi_{2}(g,h) = h\)</span>.</p></li>
+</ul>
+</div></blockquote>
+<p><span class="math notranslate nohighlight">\(\iota_{i}\)</span> es un monomorfismo y <span class="math notranslate nohighlight">\(\pi_{j}\)</span> es un epimorfismo (<span class="math notranslate nohighlight">\(i,j = 1,2\)</span>).</p>
+</div>
+</div>
+<div class="section" id="id5">
+<h2><span class="section-number">2.2. </span>Definición<a class="headerlink" href="#id5" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(f: G \to H\)</span> un homomorfismo de grupos.</p>
+<ul class="simple">
+<li><p>El <em>núcleo de</em> <span class="math notranslate nohighlight">\(f\)</span> (denotado <span class="math notranslate nohighlight">\(Kerf\)</span>) es</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\{ a \in G | f(a) = e \in H \}.\]</div>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(A\)</span> es un subconjunto de <span class="math notranslate nohighlight">\(G\)</span>, entonces</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f (A) = \{ b \in H | b = f (a) \text{ para algunos } a \in A \}\]</div>
+<p>es <em>la imagen de</em> <span class="math notranslate nohighlight">\(A\)</span>. <span class="math notranslate nohighlight">\(f(G)\)</span> se llama <em>imagen de</em> <span class="math notranslate nohighlight">\(f\)</span> y se denota <span class="math notranslate nohighlight">\(Imf\)</span>.</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(B\)</span> es un subconjunto de <span class="math notranslate nohighlight">\(H\)</span>,</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[f^{-1}(B) = \{ a \in G | f (a) \in B \}\]</div>
+<p>es <em>la imagen inversa de</em> <span class="math notranslate nohighlight">\(B\)</span>.</p>
+</div>
+<div class="section" id="teorema">
+<span id="teorema-monomorfismo-isomorfismo"></span><h2><span class="section-number">2.3. </span>Teorema<a class="headerlink" href="#teorema" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(f: G \to H\)</span> un homomorfismo de grupos.</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((i)\)</span> <span class="math notranslate nohighlight">\(f\)</span> es un monomorfismo si y sólo si <span class="math notranslate nohighlight">\(Ker f = \{e\}\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <span class="math notranslate nohighlight">\(f\)</span> es un isomorfismo si y solo si <span class="math notranslate nohighlight">\(f^{-1}: H \to G\)</span> es un homomorfismo tal que <span class="math notranslate nohighlight">\(ff^{-1} = I_{H}\)</span> y <span class="math notranslate nohighlight">\(f^{-1}f = I_{G}\)</span>.</p>
+</div></blockquote>
+<p><strong>Prueba</strong> <span class="math notranslate nohighlight">\((i)\)</span> por hipótesis, sea <span class="math notranslate nohighlight">\(f\)</span> un monomorfismo y <span class="math notranslate nohighlight">\(a \in Ker f\)</span>. Luego, tenemos que <span class="math notranslate nohighlight">\(f(a) = e_{H} = f(e)\)</span> implica <span class="math notranslate nohighlight">\(a = e\)</span>, por lo tanto <span class="math notranslate nohighlight">\(Ker f = \{e\}\)</span>. Ahora bien, si <span class="math notranslate nohighlight">\(Ker f = \{e\}\)</span> y <span class="math notranslate nohighlight">\(f(a) = f(b)\)</span>, entonces <span class="math notranslate nohighlight">\(e_{H} = f(a)f(b)^{-1} = f(a)f(b^{- 1} ) = f(ab^{- 1})\)</span>, y así tenemos que <span class="math notranslate nohighlight">\(ab^{-1}\in Kerf\)</span>. Por lo tanto, <span class="math notranslate nohighlight">\(ab^{-1} = e\)</span> (que es equilvalente a decir <span class="math notranslate nohighlight">\(a = b\)</span>) y <span class="math notranslate nohighlight">\(f\)</span> es un monomorfismo.</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> Si <span class="math notranslate nohighlight">\(f\)</span> es un isomorfismo, entonces, por (13) de Introduccíoion, Sección 3 hay un mapa de conjuntos <span class="math notranslate nohighlight">\(f^{-1}: H \to G\)</span> tal que <span class="math notranslate nohighlight">\(ff^{-1} = I_{H}\)</span> y <span class="math notranslate nohighlight">\(f^{-1}f = I_{G}\)</span>. <span class="math notranslate nohighlight">\(f^{-1}\)</span> se ve fácilmente como un homomorfismo. Lo contrario es una consecuencia inmediata de (13) de la Introducción, Sección 3 y Definición 2.1.</p>
+<p>Sea <span class="math notranslate nohighlight">\(G\)</span> un semigrupo y <span class="math notranslate nohighlight">\(H\)</span> un subconjunto no vacío de <span class="math notranslate nohighlight">\(G\)</span>. Si para cada <span class="math notranslate nohighlight">\(a\)</span>, si tenemos <span class="math notranslate nohighlight">\(ab \in H\)</span>, decimos que <span class="math notranslate nohighlight">\(H\)</span> está cerrado bajo el producto en <span class="math notranslate nohighlight">\(G\)</span>. Esto equivale a decir que la operación binaria en <span class="math notranslate nohighlight">\(G\)</span>, cuando se restringe a <span class="math notranslate nohighlight">\(H\)</span>, es de hecho una operación binaria en <span class="math notranslate nohighlight">\(H\)</span>.</p>
+</div>
+<div class="section" id="definicion-de-subgrupo">
+<span id="id6"></span><h2><span class="section-number">2.4. </span>Definición<a class="headerlink" href="#definicion-de-subgrupo" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo y <span class="math notranslate nohighlight">\(H\)</span> un subconjunto no vacío que está cerrado bajo el producto en <span class="math notranslate nohighlight">\(G\)</span>. Si <span class="math notranslate nohighlight">\(H\)</span> es en sí mismo un grupo bajo el producto en <span class="math notranslate nohighlight">\(G\)</span>, entonces se dice que <span class="math notranslate nohighlight">\(H\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(G\)</span>. Esto se denota por <span class="math notranslate nohighlight">\(H &lt; G\)</span>.</p>
+<p>Dos ejemplos de subgrupos de un grupo <span class="math notranslate nohighlight">\(G\)</span> son el propio <span class="math notranslate nohighlight">\(G\)</span> y el subgrupo trivial <span class="math notranslate nohighlight">\(\{e\}\)</span> que consta únicamente del elemento de identidad. Un subgrupo <span class="math notranslate nohighlight">\(G\)</span> tal que <span class="math notranslate nohighlight">\(H \not = G\)</span>, <span class="math notranslate nohighlight">\(H \not = \{e\}\)</span> se denomina <strong>subgrupo propio</strong>.</p>
+<div class="section" id="id7">
+<h3><span class="section-number">2.4.1. </span>Ejemplo<a class="headerlink" href="#id7" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>El conjunto de todos los múltiplos de algún entero fijo <span class="math notranslate nohighlight">\(n\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>, que es isomorfo a <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> (ejercicio 7).</p>
+</div>
+<div class="section" id="id8">
+<h3><span class="section-number">2.4.2. </span>Ejemplo<a class="headerlink" href="#id8" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En <span class="math notranslate nohighlight">\(\mathbb{S}_{n}\)</span>, el grupo de todas las permutaciones de <span class="math notranslate nohighlight">\(\{1,2,\dots, n\}\)</span>, el conjunto de todas las permutaciones que dejan fijo a <span class="math notranslate nohighlight">\(n\)</span> forma un subgrupo isomorfo a <span class="math notranslate nohighlight">\(\mathbb{S}_{n-1}\)</span> (ejercicio 8).</p>
+</div>
+<div class="section" id="id9">
+<h3><span class="section-number">2.4.3. </span>Ejemplo<a class="headerlink" href="#id9" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En <span class="math notranslate nohighlight">\(\mathbb{Z}_{6} = \{\overline{0},\overline{1},\overline{2},\overline{3},\overline{4},\overline{5}\}\)</span>, tanto <span class="math notranslate nohighlight">\(\{\overline{0},\overline{3}\}\)</span> como <span class="math notranslate nohighlight">\(\{\overline{0},\overline{2},\overline{4}\}\)</span> son subgrupos bajo la suma. Si <span class="math notranslate nohighlight">\(p\)</span> es primo, <span class="math notranslate nohighlight">\((\mathbb{Z}_{p}, +)\)</span> no tiene subgrupos adecuados.</p>
+</div>
+<div class="section" id="id10">
+<h3><span class="section-number">2.4.4. </span>Ejemplo<a class="headerlink" href="#id10" title="Enlazar permanentemente con este título">¶</a></h3>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\(f: G \to H\)</span> es un homomorfismo de grupos, entonces <span class="math notranslate nohighlight">\(Ker f\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(A\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(G\)</span>, <span class="math notranslate nohighlight">\(f (A)\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(H\)</span>; en particular <span class="math notranslate nohighlight">\(Im f\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(H\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(B\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(H\)</span>, <span class="math notranslate nohighlight">\(f^{-1} (B)\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(G\)</span> (ejercicio 9).</p></li>
+</ul>
+</div>
+<div class="section" id="id11">
+<h3><span class="section-number">2.4.5. </span>Ejemplo<a class="headerlink" href="#id11" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo, entonces el conjunto <span class="math notranslate nohighlight">\(Aut G\)</span> de todos los automorfismos de <span class="math notranslate nohighlight">\(G\)</span> es un grupo, con la composición de funciones como operación binaria (ejercicio 15).</p>
+<p>Según el <a class="reference internal" href="01-semigrupos-monoides-y-grupos.html#propiedades-basicas-de-grupos"><span class="std std-ref">Teorema</span></a> 1.2, el elemento identidad de cualquier subgrupo <span class="math notranslate nohighlight">\(H\)</span> es el elemento identidad de <span class="math notranslate nohighlight">\(G\)</span> y el inverso de <span class="math notranslate nohighlight">\(a \in H\)</span> es el inverso <span class="math notranslate nohighlight">\(a^{-1}\)</span> de <span class="math notranslate nohighlight">\(a\)</span> en <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</div>
+</div>
+<div class="section" id="id12">
+<h2><span class="section-number">2.5. </span>Teorema<a class="headerlink" href="#id12" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(H\)</span> un subconjunto no vacío de un grupo <span class="math notranslate nohighlight">\(G\)</span>. Entonces <span class="math notranslate nohighlight">\(H\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(G\)</span> si y solo si <span class="math notranslate nohighlight">\(ab^{-1} \in H\)</span> para todo <span class="math notranslate nohighlight">\(a, b \in H\)</span>.</p>
+<p><strong>Prueba</strong>. <span class="math notranslate nohighlight">\((\Leftarrow)\)</span> Existe un <span class="math notranslate nohighlight">\(a \in H\)</span> y por lo tanto <span class="math notranslate nohighlight">\(e = aa^{-1} E H\)</span>. Por lo tanto, para cualquier <span class="math notranslate nohighlight">\(b \in H\)</span>, <span class="math notranslate nohighlight">\(b^{-1} = eb^{-1} \in H\)</span>. Si <span class="math notranslate nohighlight">\(a, b \in H\)</span>, entonces <span class="math notranslate nohighlight">\(b^{-1} \in H\)</span> y por lo tanto <span class="math notranslate nohighlight">\(ab = a(b^{-1}){-1} \in H\)</span>. El producto en <span class="math notranslate nohighlight">\(H\)</span> es asociativo ya que <span class="math notranslate nohighlight">\(G\)</span> es un grupo. Por tanto, <span class="math notranslate nohighlight">\(H\)</span> es un (sub)grupo. <span class="math notranslate nohighlight">\((\Rightarrow)\)</span> es trivial.</p>
+</div>
+<div class="section" id="corolario">
+<h2><span class="section-number">2.6. </span>Corolario<a class="headerlink" href="#corolario" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo y <span class="math notranslate nohighlight">\(\{H_{i} | i\in I\}\)</span> es una familia de subgrupos no vacía, entonces <span class="math notranslate nohighlight">\(\displaystyle\bigcap_{i\in I}H_{i}\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p><strong>Prueba. Pendiente.</strong></p>
+</div>
+<div class="section" id="id13">
+<h2><span class="section-number">2.7. </span>Definición<a class="headerlink" href="#id13" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo y <span class="math notranslate nohighlight">\(X\)</span> un subconjunto de <span class="math notranslate nohighlight">\(G\)</span>. Sea <span class="math notranslate nohighlight">\(\{H_{i} | i\in I\}\)</span> la familia de todos los subgrupos de <span class="math notranslate nohighlight">\(G\)</span> que contienen <span class="math notranslate nohighlight">\(X\)</span>. Entonces <span class="math notranslate nohighlight">\(\displaystyle\bigcap_{i\in I}H_{i}\)</span> se denomina subgrupo de <span class="math notranslate nohighlight">\(G\)</span> generado por el conjunto <span class="math notranslate nohighlight">\(X\)</span> y se denota <span class="math notranslate nohighlight">\(\langle X\rangle\)</span>.</p>
+<p>Los elementos de <span class="math notranslate nohighlight">\(X\)</span> son los generadores del subgrupo <span class="math notranslate nohighlight">\(\langle X\rangle\)</span>, que también pueden ser generados por otros subconjuntos (es decir, podemos tener <span class="math notranslate nohighlight">\(\langle X\rangle = \langle Y \rangle\)</span> con <span class="math notranslate nohighlight">\(X\not = Y\)</span>). Si <span class="math notranslate nohighlight">\(X = \{a_{1}, a_{2},\dots, a_{n}\}\)</span>, escribimos <span class="math notranslate nohighlight">\(\langle a_{1}, a_{2},\dots, a_{n}\rangle\)</span> en lugar de <span class="math notranslate nohighlight">\(\langle X\rangle\)</span>. Si <span class="math notranslate nohighlight">\(G = \langle a_{1}, a_{2},\dots, a_{n}\rangle\)</span>, <span class="math notranslate nohighlight">\(a_{i} \in G\)</span>, se dice que <span class="math notranslate nohighlight">\(G\)</span> se genera de forma finita. Si <span class="math notranslate nohighlight">\(a \in G\)</span>, el subgrupo <span class="math notranslate nohighlight">\(\langle a \rangle\)</span> se llama el (sub)grupo cíclico generado por <span class="math notranslate nohighlight">\(a\)</span>.</p>
+</div>
+<div class="section" id="id14">
+<h2><span class="section-number">2.8. </span>Teorema<a class="headerlink" href="#id14" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sean <span class="math notranslate nohighlight">\(G\)</span> un grupo y <span class="math notranslate nohighlight">\(X\)</span> subconjunto no vacío de <span class="math notranslate nohighlight">\(G\)</span>, entonces el subgroup <span class="math notranslate nohighlight">\(\langle X\rangle\)</span> generado por <span class="math notranslate nohighlight">\(X\)</span> consiste de todos los productos finitos de la forma <span class="math notranslate nohighlight">\(a_{1}^{n_{1}} a_{2}^{n_{2}} \dots a_{r}^{n_{r}}\)</span> (<span class="math notranslate nohighlight">\(a_{i} \in X, n_{i} \in \mathbb{Z}\)</span>). En particular para todo <span class="math notranslate nohighlight">\(a e G\)</span>, <span class="math notranslate nohighlight">\(\langle a \rangle = \{a_{n} | n \in \mathbb{Z}\}\)</span>.</p>
+<p><strong>Bosquejo de la prueba</strong>. Demuestre que el conjunto <span class="math notranslate nohighlight">\(H\)</span> de todos esos productos es un subgrupo de <span class="math notranslate nohighlight">\(G\)</span> que contiene <span class="math notranslate nohighlight">\(X\)</span> y está contenido en cada subgrupo que contiene <span class="math notranslate nohighlight">\(X\)</span>. Por lo tanto, <span class="math notranslate nohighlight">\(H &lt; \langle X \rangle &lt; H\)</span>. <span class="math notranslate nohighlight">\(\blacksquare\)</span></p>
+</div>
+<div class="section" id="ejemplos">
+<h2><span class="section-number">2.9. </span>Ejemplos<a class="headerlink" href="#ejemplos" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>El grupo aditivo <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> es un grupo cíclico infinito con generador <span class="math notranslate nohighlight">\(1\)</span>, ya que según la <a class="reference internal" href="01-semigrupos-monoides-y-grupos.html#producto-n-estandar"><span class="std std-ref">Definición</span></a> 1.8 (notación aditiva), <span class="math notranslate nohighlight">\(m1=m\)</span> para todo <span class="math notranslate nohighlight">\(m\in\mathbb{Z}\)</span>. Por supuesto, las «potencias» del elemento generador no necesitan ser todas distintas como lo son en <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>. El subgrupo trivial <span class="math notranslate nohighlight">\(\langle e \rangle\)</span> de cualquier grupo es cíclico; el subgrupo multiplicativo <span class="math notranslate nohighlight">\(\langle i \rangle\)</span> en <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> es cíclico de orden <span class="math notranslate nohighlight">\(4\)</span> y para cada m el grupo aditivo <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span> es cíclico de orden <span class="math notranslate nohighlight">\(m\)</span> con generador <span class="math notranslate nohighlight">\(1 \in \mathbb{Z}_{m}\)</span>. En la Sección <a class="reference internal" href="03-grupos-ciclicos.html"><span class="doc">Grupos Cíclicos</span></a> demostraremos que todo subgrupo cíclico es isomorfo a <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> o <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> para algunos <span class="math notranslate nohighlight">\(m\)</span>. Además, vea el ejercicio 12.</p>
+<p>Si <span class="math notranslate nohighlight">\(\{H_{i} | i \in I \}\)</span> es una familia de subgrupos de un grupo <span class="math notranslate nohighlight">\(G\)</span>, entonces <span class="math notranslate nohighlight">\(\displaystyle\bigcup_{i \in I} H_{i}\)</span> no es un subgrupo de <span class="math notranslate nohighlight">\(G\)</span> en general.</p>
+<p>El subgrupo <span class="math notranslate nohighlight">\(\langle \displaystyle\bigcup_{i \in I} H_{i}\rangle\)</span> generado por el conjunto <span class="math notranslate nohighlight">\(\displaystyle\bigcup_{i \in I} H_{i}\)</span> se llama subgrupo generado por los grupos <span class="math notranslate nohighlight">\(\{H_{i} | i \in I \}\)</span>. Si <span class="math notranslate nohighlight">\(H\)</span> y <span class="math notranslate nohighlight">\(K\)</span> son subgrupos, el subgrupo <span class="math notranslate nohighlight">\(\langle H \cup K \rangle\)</span> generado por <span class="math notranslate nohighlight">\(H\)</span> y <span class="math notranslate nohighlight">\(K\)</span> se llama la unión de <span class="math notranslate nohighlight">\(H\)</span> y <span class="math notranslate nohighlight">\(K\)</span> y se denota <span class="math notranslate nohighlight">\(H \vee K\)</span> (en notación aditiva: <span class="math notranslate nohighlight">\(H + K\)</span>).</p>
+</div>
+<div class="section" id="ejercicios">
+<h2><span class="section-number">2.10. </span>Ejercicios<a class="headerlink" href="#ejercicios" title="Enlazar permanentemente con este título">¶</a></h2>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Si <span class="math notranslate nohighlight">\(f: G \to H\)</span> es un homomorfismo de grupos, entonces <span class="math notranslate nohighlight">\(f (e_{G}) = e_{h}\)</span> y  <span class="math notranslate nohighlight">\(f(a^{-1}) = f(a)^{-1}\)</span> para todo <span class="math notranslate nohighlight">\(a \in G\)</span>. Demuestre con un ejemplo que la primera conclusión puede sea ​​falsa si <span class="math notranslate nohighlight">\(G, H\)</span> son monoides que no son grupos.</p></li>
+<li><p>Un grupo <span class="math notranslate nohighlight">\(G\)</span> es abeliano si y solo si el mapa <span class="math notranslate nohighlight">\(\iota: G\to H\)</span> dado por <span class="math notranslate nohighlight">\(a \overset{\iota}{\mapsto} a^{-1}\)</span> es un automorfismo.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(Q_{8}\)</span> el grupo (bajo multiplicación de matrices ordinaria) generado por las matrices complejas <span class="math notranslate nohighlight">\(A = \left(\begin{matrix} 0 &amp; 1 \\ -1 &amp; 0\end{matrix}\right)\)</span> y <span class="math notranslate nohighlight">\(B = \left(\begin{matrix} 0 &amp; i \\ i &amp; 0\end{matrix}\right)\)</span> donde <span class="math notranslate nohighlight">\(i^{2}=-1\)</span>. Muestre que <span class="math notranslate nohighlight">\(Q_{8}\)</span> es un grupo no abeliano de orden <span class="math notranslate nohighlight">\(8\)</span>. <span class="math notranslate nohighlight">\(Q_{8}\)</span> se llama grupo de cuaterniones. [Sugerencia: observe que <span class="math notranslate nohighlight">\(BA = A^{3}B\)</span>, de donde cada elemento de <span class="math notranslate nohighlight">\(Q_{8}\)</span> es de la forma <span class="math notranslate nohighlight">\(A^{i}B^{j}\)</span>. Tenga en cuenta también que <span class="math notranslate nohighlight">\(A^{4} = B^{4} = I\)</span>, donde <span class="math notranslate nohighlight">\(I = \left(\begin{matrix} 1 &amp; 0 \\ 0 &amp; 1\end{matrix}\right)\)</span> es el elemento de identidad de <span class="math notranslate nohighlight">\(Q_{8}\)</span>.]</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(H\)</span> el grupo (bajo multiplicación de matrices) de matrices reales generadas por <span class="math notranslate nohighlight">\(C = \left(\begin{matrix} 0 &amp; 1 \\ -1 &amp; 0\end{matrix}\right)\)</span> y <span class="math notranslate nohighlight">\(C = \left(\begin{matrix} 0 &amp; 1 \\ 1 &amp; 0\end{matrix}\right)\)</span>. Demuestre que <span class="math notranslate nohighlight">\(H\)</span> es un grupo no abeliano de orden <span class="math notranslate nohighlight">\(8\)</span> que no es isomorfo al grupo de cuaterniones del ejercicio 3, pero es isomorfo al grupo <span class="math notranslate nohighlight">\(D_{4}^{\ast}\)</span>.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(S\)</span> un subconjunto no vacío de un grupo <span class="math notranslate nohighlight">\(G\)</span> y una relación en <span class="math notranslate nohighlight">\(G\)</span> definida por <span class="math notranslate nohighlight">\(a \sim b\)</span> si y solo si <span class="math notranslate nohighlight">\(ab^{-1} \in S\)</span>. Demuestrar que <span class="math notranslate nohighlight">\(\sim\)</span> es una relación de equivalencia si y solo si <span class="math notranslate nohighlight">\(S\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+<li><p>Un subconjunto finito no vacío de un grupo es un subgrupo si y solo si está cerrado bajo el producto en <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(n\)</span> es un número entero fijo, entonces <span class="math notranslate nohighlight">\(\{kn | k \in \mathbb{Z}\} \subset \mathbb{Z}\)</span> es un subgrupo aditivo de <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>, que es isomorfo a <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>.</p></li>
+<li><p>El conjunto <span class="math notranslate nohighlight">\(\{\sigma \in \mathbb{S}_{n} | \sigma (n) = n \}\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(\mathbb{S}_{n}\)</span> que es isomorfo a <span class="math notranslate nohighlight">\(\mathbb{S}_{n-1}\)</span>.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(f: G \to H\)</span> un homomorfismo de grupos, <span class="math notranslate nohighlight">\(A\)</span> un subgrupo de <span class="math notranslate nohighlight">\(G\)</span> y <span class="math notranslate nohighlight">\(B\)</span> un subgrupo de <span class="math notranslate nohighlight">\(H\)</span>.</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((a)\)</span> <span class="math notranslate nohighlight">\(Ker f\)</span> y <span class="math notranslate nohighlight">\(f^{-1} (B)\)</span> son subgrupos de <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((b)\)</span> <span class="math notranslate nohighlight">\(f(A)\)</span> es un subgrupo de <span class="math notranslate nohighlight">\(H\)</span>.</p>
+</div></blockquote>
+</li>
+<li><p>Enumere todos los subgrupos de <span class="math notranslate nohighlight">\(\mathbb{Z}_{2}\oplus\mathbb{Z}_{2}\)</span>. ¿Es <span class="math notranslate nohighlight">\(\mathbb{Z}_{2}\oplus\mathbb{Z}_{2}\)</span> isomorfo a <span class="math notranslate nohighlight">\(\mathbb{Z}_{4}\)</span>?</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo, entonces <span class="math notranslate nohighlight">\(C = \{a \in G | ax = xa \text{ para todo } x \in G \}\)</span> es un subgrupo abeliano de <span class="math notranslate nohighlight">\(G\)</span>. <span class="math notranslate nohighlight">\(C\)</span> se llama el centro de <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+<li><p>El grupo <span class="math notranslate nohighlight">\(D_{4}^{\ast}\)</span> no es cíclico, pero puede ser generado por dos elementos. Lo mismo ocurre con <span class="math notranslate nohighlight">\(\mathbb{S}_{n}\)</span> (no trivial). ¿Cuál es el número mínimo de generadores del grupo aditivo <span class="math notranslate nohighlight">\(\mathbb{Z}\oplus\mathbb{Z}\)</span>?</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(G = \langle a\rangle\)</span> es un grupo cíclico y <span class="math notranslate nohighlight">\(H\)</span> es cualquier grupo, entonces todo homomorfismo <span class="math notranslate nohighlight">\(f: G \to H \)</span>.</p></li>
+<li><p>Los siguientes subgrupos cíclicos son todos isomorfos: el grupo multiplicativo <span class="math notranslate nohighlight">\(\langle i \rangle\)</span> en <span class="math notranslate nohighlight">\(\mathbb{C}\)</span>, el aditivo grupo <span class="math notranslate nohighlight">\(\mathbb{Z}_{4}\)</span> y el subgrupo <span class="math notranslate nohighlight">\(\langle \left(\begin{matrix} 1 &amp; 2 &amp; 3 &amp; 4 \\ 2 &amp; 3 &amp; 4 &amp; 1 \end{matrix}\right) \rangle\)</span> de <span class="math notranslate nohighlight">\(\mathbb{S}_{4}\)</span>.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo y <span class="math notranslate nohighlight">\(Aut G\)</span> el conjunto de todos los automorfismos de <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((a)\)</span> <span class="math notranslate nohighlight">\(Aut G\)</span> es un grupo con composición de funciones como operación binaria. [Ayuda. <span class="math notranslate nohighlight">\(1_{G} \in Aut G\)</span> es una identidad; los inversos existen según el <a class="reference internal" href="#teorema-monomorfismo-isomorfismo"><span class="std std-ref">Teorema</span></a> 2.3.]</p>
+<p><span class="math notranslate nohighlight">\((b)\)</span> <span class="math notranslate nohighlight">\(Aut \mathbb{Z}\cong \mathbb{Z}_{2}\)</span> y <span class="math notranslate nohighlight">\(Aut \mathbb{Z}_{6}\cong \mathbb{Z}_{2}\)</span>; <span class="math notranslate nohighlight">\(Aut \mathbb{Z}_{8}\cong \mathbb{Z}_{2}\oplus \mathbb{Z}_{2}\)</span>; <span class="math notranslate nohighlight">\(Aut \mathbb{Z}_{p}\cong \mathbb{Z}_{p-1}\)</span> (<span class="math notranslate nohighlight">\(p\)</span> primo).</p>
+<p><span class="math notranslate nohighlight">\((c)\)</span> ¿Qué es <span class="math notranslate nohighlight">\(Aut \mathbb{Z}_{n}\)</span> para arbitrario <span class="math notranslate nohighlight">\(n \in \mathbb{N}^{\ast}\)</span>?</p>
+</li>
+<li><p>Para cada primo <span class="math notranslate nohighlight">\(p\)</span>, el subgrupo aditivo <span class="math notranslate nohighlight">\(\mathbb{Z}(p^{\infty})\)</span> de <span class="math notranslate nohighlight">\(\mathbb{Q}/\mathbb{Z}\)</span> (ejercicio 1.10) es generado por el conjunto <span class="math notranslate nohighlight">\(\{ \overline{1/p^{\infty}} | n \in \mathbb{N}^{\ast} \}\)</span>.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo abeliano y sean <span class="math notranslate nohighlight">\(H, K\)</span> subgrupos de <span class="math notranslate nohighlight">\(G\)</span>. Demuestre que la unión <span class="math notranslate nohighlight">\(H \vee K\)</span> es el conjunto <span class="math notranslate nohighlight">\(\{ab | a \in H, b \in K \}\)</span>. Extienda este resultado a cualquier número finito de subgrupos de <span class="math notranslate nohighlight">\(G\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\((a)\)</span> Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo <span class="math notranslate nohighlight">\(\{ H_{i} | i \in I \}\)</span> una familia de subgrupos. Enuncie y demuestre una condición que implicará que <span class="math notranslate nohighlight">\(\displaystyle\bigcup_{i\in I} H_{i}\)</span> es un subgrupo, es decir, que <span class="math notranslate nohighlight">\(\displaystyle\bigcup_{i\in I} H_{i} = \langle \displaystyle\bigcup_{i\in I} H_{i} \rangle\)</span></p>
+<p><span class="math notranslate nohighlight">\((b)\)</span> Dé un ejemplo de un grupo <span class="math notranslate nohighlight">\(G\)</span> y una familia de subgrupos <span class="math notranslate nohighlight">\(\{H_{i} | i \in I\}\)</span> tal que <span class="math notranslate nohighlight">\(\displaystyle\bigcup_{i\in I} H_{i} \not = \langle \displaystyle\bigcup_{i\in I} H_{i} \rangle\)</span>.</p>
+</li>
+<li><p><span class="math notranslate nohighlight">\((a)\)</span> El conjunto de todos los subgrupos de un grupo <span class="math notranslate nohighlight">\(G\)</span>, parcialmente ordenados por inclusión de la teoría de conjuntos, forma un retículo completo (Introducción, Ejercicios 7.1 y 7.2) en el que g.l.b. de <span class="math notranslate nohighlight">\(\{ H_{i} | i \in I \}\)</span> es <span class="math notranslate nohighlight">\(\displaystyle\bigcap_{i\in I} H_{i}\)</span> y el l.u.b. es <span class="math notranslate nohighlight">\(\langle \displaystyle\bigcup_{i\in I} H_{i} \rangle\)</span> .</p>
+<p><span class="math notranslate nohighlight">\((b)\)</span> Mostrar la red de subgrupos del <span class="math notranslate nohighlight">\(\mathbb{S}_{3}\)</span>, <span class="math notranslate nohighlight">\(D_{4}^{\ast}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{Z}_{6}\)</span>, <span class="math notranslate nohighlight">\(\mathbb{Z}_{27}\)</span>, y <span class="math notranslate nohighlight">\(\mathbb{Z}_{36}\)</span>.</p>
+</li>
+</ol>
+</div></blockquote>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="03-grupos-ciclicos.html" class="btn btn-neutral float-right" title="3. Grupos Cíclicos" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="01-semigrupos-monoides-y-grupos.html" class="btn btn-neutral float-left" title="1. Semigrupos, Monoides y Grupos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2021, Ferreira, Juan David.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

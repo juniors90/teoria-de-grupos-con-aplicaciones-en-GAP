@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>3. Grupos Cíclicos &mdash; documentación de Teoría de Grupos con aplicaciones en GAP - 0.0.1</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex.html" />
+    <link rel="search" title="Búsqueda" href="../search.html" />
+    <link rel="next" title="4. Coclases" href="04-coclases.html" />
+    <link rel="prev" title="2. Homomorfismos y Subgrupos" href="02-homomorfismos-y-subgrupos.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Teoría de Grupos con aplicaciones en GAP
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Grupo:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01-semigrupos-monoides-y-grupos.html">1. Semigrupos, Monoides y Grupos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-homomorfismos-y-subgrupos.html">2. Homomorfismos y Subgrupos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Grupos Cíclicos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#teorema">3.1. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#teorema-grupo-ciclico-segun-el-orden">3.2. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definicion">3.3. Definición</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">3.4. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.5. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">3.6. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ejercicios">3.7. Ejercicios</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04-coclases.html">4. Coclases</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05-normalidad-grupo-cociente-y-homomorfismos.html">5. Normalidad, Grupo Cociente y Homomorfismos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06-grupo-simetrico-alternante-dihedral.html">6. Grupo Simétrico, Alternante y Dihedral</a></li>
+<li class="toctree-l1"><a class="reference internal" href="07-categorias-productos-coproductos-y-objetos-libres.html">7. Categorias: Productos, Coproductos y Objetos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="08-productos-directos-y-sumas-directas.html">8. Productos directos y Sumas directas</a></li>
+<li class="toctree-l1"><a class="reference internal" href="09-grupos-libres-productos-libres-generadores-y-relaciones.html">9. Grupos Libres, Productos Libres, Generadores y Relaciones</a></li>
+</ul>
+<p class="caption"><span class="caption-text">La estructura de Grupo:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/01-grupos-abelianos-libres.html">1. Grupos Abelianos Libres</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/02-grupos-abelianos-finitamente-generados.html">2. Grupos Abelianos Finitamente Generados</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/03-el-teorema-de-krull-schmidt.html">3. El Teorema de Krull-Schmidt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/04-la-accion-de-un-grupo-sobre-un-conjunto.html">4. La Acción de un Grupo sobre un Conjunto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/05-los-teoremas-de-sylow.html">5. Los Teoremas de Sylow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/06-clasificacion-de-grupos-finitos.html">6. Clasificación de Grupos Finitos</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/07-grupo-nilpotente-y-solubles.html">7. Grupo Nilpotente y Soluble</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Estructura/08-serie-normal-y-subnormal.html">8. Serie Normal y Subnormal</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Teoría de Grupos con aplicaciones en GAP</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">3. </span>Grupos Cíclicos</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/Grupos/03-grupos-ciclicos.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="grupos-ciclicos">
+<h1><span class="section-number">3. </span>Grupos Cíclicos<a class="headerlink" href="#grupos-ciclicos" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>La estructura de los grupos cíclicos es relativamente simple. Caracterizaremos completamente todos los grupos cíclicos (hasta el isomorfismo).</p>
+<div class="section" id="teorema">
+<span id="primer-teorema-grupo-ciclico"></span><h2><span class="section-number">3.1. </span>Teorema<a class="headerlink" href="#teorema" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>Todo subgrupo</em> <span class="math notranslate nohighlight">\(H\)</span> <em>del grupo de aditivos</em> <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span> <em>es cíclico</em>. <em>Sea</em> <span class="math notranslate nohighlight">\(H = \langle 0 \rangle\)</span> <em>o</em> <span class="math notranslate nohighlight">\(H = \langle m \rangle\)</span>, <em>donde</em> <span class="math notranslate nohighlight">\(m\)</span> <em>es el número entero menos positivo en</em> <span class="math notranslate nohighlight">\(H\)</span>. <em>En particular, si</em> <span class="math notranslate nohighlight">\(H \not = \langle 0 \rangle\)</span>, <em>entonces</em> <span class="math notranslate nohighlight">\(H\)</span> <em>es infinito</em>.</p>
+<p><strong>Prueba</strong> Sea <span class="math notranslate nohighlight">\(H = \langle 0 \rangle\)</span> o <span class="math notranslate nohighlight">\(H\)</span> contiene un número entero positivo mínimo <span class="math notranslate nohighlight">\(m\)</span>. Claramente <span class="math notranslate nohighlight">\(\langle m \rangle = \{ km | k \in \mathbb{Z} \} \subset H\)</span>. Por el contrario, si <span class="math notranslate nohighlight">\(h \in H\)</span>, entonces <span class="math notranslate nohighlight">\(h = qm + r\)</span> con <span class="math notranslate nohighlight">\(q, r \in \mathbb{Z}\)</span> y <span class="math notranslate nohighlight">\(0\leq r &lt;m \)</span> la minimidad de <span class="math notranslate nohighlight">\(m\)</span> implica <span class="math notranslate nohighlight">\(r = 0\)</span> y <span class="math notranslate nohighlight">\(h = qm\)</span>. De ahí que el <span class="math notranslate nohighlight">\(H \subset \langle m \rangle\)</span>. Si <span class="math notranslate nohighlight">\(H \not = \langle 0 \rangle\)</span>, está claro que <span class="math notranslate nohighlight">\(H = \langle m \rangle\)</span> es infinito.</p>
+</div>
+<div class="section" id="teorema-grupo-ciclico-segun-el-orden">
+<span id="id1"></span><h2><span class="section-number">3.2. </span>Teorema<a class="headerlink" href="#teorema-grupo-ciclico-segun-el-orden" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>Sea</em> <span class="math notranslate nohighlight">\(H\)</span> <em>un grupo cíclico</em>:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((i)\)</span> <em>Si</em> <span class="math notranslate nohighlight">\(H\)</span> <em>es infinito entonces  es isomorfo al grupo aditivo</em> <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <em>Si</em> <span class="math notranslate nohighlight">\(H\)</span> <em>es finito de orden</em> <span class="math notranslate nohighlight">\(m\)</span> <em>entonces es isomorfo al grupo aditivo</em> <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span>.</p>
+</div></blockquote>
+<p><strong>Prueba</strong>. Sea <span class="math notranslate nohighlight">\(a\in H: \langle a \rangle=H\)</span> y consideremos el mapa</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \mathbb{Z} &amp;\to H           \\
+    k          &amp;\mapsto a^{k}
+\end{align}\end{split}\]</div>
+<p>Notar que es un <strong>morfismo de grupos</strong></p>
+<div class="math notranslate nohighlight">
+\[f(k+k')=a^{k+k'}=a^{k}a^{k'}=f(k)f(k'),\]</div>
+<p>más aún, es un <strong>epimorfismo</strong>.</p>
+<ul class="simple">
+<li><p>si <span class="math notranslate nohighlight">\(f\)</span> es isomorfo <span class="math notranslate nohighlight">\(\Rightarrow\)</span> <span class="math notranslate nohighlight">\(H\)</span> es isomorfo a <span class="math notranslate nohighlight">\(\mathbb{Z}\)</span>.</p></li>
+</ul>
+<p>si <span class="math notranslate nohighlight">\(f\)</span> no es isomorfismo entonces <span class="math notranslate nohighlight">\(Kerf\not = \{ 0 \}\)</span>.</p>
+<p>Así <span class="math notranslate nohighlight">\(Kerf &lt; \mathbb{Z}\)</span> distinto de <span class="math notranslate nohighlight">\(\{ 0 \}\)</span> <span class="math notranslate nohighlight">\(\Rightarrow\)</span> <span class="math notranslate nohighlight">\(\exists n\in \mathbb{Z}_{+}:Kerf=\langle n \rangle\)</span>, por el <a class="reference internal" href="#primer-teorema-grupo-ciclico"><span class="std std-ref">Teorema</span></a> anterior.</p>
+<p>Ahora, esto implica <span class="math notranslate nohighlight">\(a^{n}=e\)</span> y <span class="math notranslate nohighlight">\(n\)</span> es el menor número natural que satisface esta condición. Además</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    a^{r} = a^{s} &amp;\Leftrightarrow a^{r}a^{-s} = e                              \\
+                  &amp;\Leftrightarrow a^{r-s} = e                                  \\
+                  &amp;\Leftrightarrow r-s \in Kerf                                 \\
+                  &amp;\Leftrightarrow r-s \in \langle n \rangle \Rightarrow n|r-s.
+\end{align}\end{split}\]</div>
+<p>Luego</p>
+<div class="math notranslate nohighlight">
+\[\begin{align}
+    a^{r} = a^{s} &amp;\Leftrightarrow \overline{r}=\overline{s} \text{ en } \mathbb{Z}/n\mathbb{Z}.
+\end{align}\]</div>
+<p>Definimos</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+    \overline{f}:\mathbb{Z}/n\mathbb{Z} &amp;\to H           \\
+    \overline{r}                        &amp;\mapsto a^{r}
+\end{align}\end{split}\]</div>
+<p>y <span class="math notranslate nohighlight">\(\overline{f}\)</span> es un <strong>isomorfismo</strong>.</p>
+<p>Notar que si <span class="math notranslate nohighlight">\(a^{N}\in H\Rightarrow N=qn=+r\)</span> con <span class="math notranslate nohighlight">\(0\leq r &lt; N\)</span> y <span class="math notranslate nohighlight">\(a^{N}= (a^{n})^{q}a^{r}=ea^{r}=\overline{f}(\overline{r})\)</span> <span class="math notranslate nohighlight">\(\blacksquare\)</span></p>
+</div>
+<div class="section" id="definicion">
+<span id="orden-de-un-grupo"></span><h2><span class="section-number">3.3. </span>Definición<a class="headerlink" href="#definicion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo y <span class="math notranslate nohighlight">\(a \in G\)</span>. El orden de <span class="math notranslate nohighlight">\(a\)</span> es el orden del subgrupo cíclico <span class="math notranslate nohighlight">\(\langle a \rangle\)</span>. Lo denota <span class="math notranslate nohighlight">\(|a|\)</span>.</p>
+</div>
+<div class="section" id="id2">
+<h2><span class="section-number">3.4. </span>Teorema<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>Sea</em> <span class="math notranslate nohighlight">\(G\)</span> <em>un grupo y</em> <span class="math notranslate nohighlight">\(a \in G\)</span>.</p>
+<ol class="arabic">
+<li><p><em>si</em> <span class="math notranslate nohighlight">\(|a| = \infty\)</span> <em>entonces</em></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((i)\)</span> <span class="math notranslate nohighlight">\(a^{k} = e\)</span> <em>si y sólo si</em> <span class="math notranslate nohighlight">\(k = 0\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <em>Los elementos</em> <span class="math notranslate nohighlight">\(\{ a^{k}|k\in \mathbb{Z} \}\)</span> <em>son todos distintos</em>.</p>
+</div></blockquote>
+</li>
+<li><p><em>si</em> <span class="math notranslate nohighlight">\(|a| = m\)</span> <em>entonces</em></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((i)\)</span> <span class="math notranslate nohighlight">\(m\)</span> <em>es el menor natural tal que</em> <span class="math notranslate nohighlight">\(a^{m} = e\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <span class="math notranslate nohighlight">\(a^{m} = e \Leftrightarrow m|k\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((iii)\)</span> <span class="math notranslate nohighlight">\(a^{k} = a^{l} \Leftrightarrow m|k-l\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((iv)\)</span> <span class="math notranslate nohighlight">\(\langle a \rangle = \{a, a^{2}, a^{3}, \dots, a^{m}=e \}\)</span>:</p>
+<p><span class="math notranslate nohighlight">\((v)\)</span> si <span class="math notranslate nohighlight">\(k|m \Rightarrow |a^{k}|=m/k\)</span></p>
+</div></blockquote>
+</li>
+</ol>
+</div>
+<div class="section" id="id3">
+<h2><span class="section-number">3.5. </span>Teorema<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>Sean</em> <span class="math notranslate nohighlight">\(G\)</span> <em>y</em> <span class="math notranslate nohighlight">\(K\)</span> <em>dos grupos tal que</em> <span class="math notranslate nohighlight">\(G\)</span> <em>es cíclico</em>:</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((i)\)</span> <em>Si</em> <span class="math notranslate nohighlight">\(f: G\to K\)</span> <em>es un homomorfismo de grupos un grupo entonces</em> <span class="math notranslate nohighlight">\(Imf\)</span> <em>es un grupo cíclico</em>.</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <em>Todo subgrupo de</em> <span class="math notranslate nohighlight">\(G\)</span> <em>es cíclico. En particular, si</em> <span class="math notranslate nohighlight">\(H\)</span> <em>es un subgrupo no trivial de</em> <span class="math notranslate nohighlight">\(G = \langle a \rangle\)</span> <em>y</em> <span class="math notranslate nohighlight">\(m\)</span> <em>es el número entero menos positivo tal que</em> <span class="math notranslate nohighlight">\(a^{m}\in H\)</span>, <em>entonces</em> <span class="math notranslate nohighlight">\(H = \langle a^{m} \rangle\)</span>.</p>
+</div></blockquote>
+<p><strong>Bosquejo de prueba</strong>. Si <span class="math notranslate nohighlight">\(f: G\to K\)</span> es un homomorfismo de grupos, entonces <span class="math notranslate nohighlight">\(Imf = \langle f(a) \rangle\)</span>. Para probar la segunda declaración, simplemente traslade la demostración del Teorema 3.1 a notación multiplicativa (es decir, reemplace cada <span class="math notranslate nohighlight">\(t \in Z\)</span> por <span class="math notranslate nohighlight">\(a^{t}\)</span> en todo). Esta prueba funciona incluso si <span class="math notranslate nohighlight">\(G\)</span> es finito.</p>
+<p>Recuerde que dos elementos distintos en un grupo pueden generar el mismo subgrupo cíclico.</p>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">3.6. </span>Teorema<a class="headerlink" href="#id4" title="Enlazar permanentemente con este título">¶</a></h2>
+<p><em>Sea</em> <span class="math notranslate nohighlight">\(Imf = \langle f(a) \rangle\)</span> <em>un grupo cíclico.</em></p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((i)\)</span> <em>Si</em> <span class="math notranslate nohighlight">\(G\)</span> <em>es infinito, entonces</em> <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(a^{-1}\)</span> <em>son los únicos generadores de</em> <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <em>Si</em> <span class="math notranslate nohighlight">\(G\)</span> <em>es finito de orden</em> <span class="math notranslate nohighlight">\(m\)</span>, <em>entonces</em> <span class="math notranslate nohighlight">\(a^{k}\)</span> <em>es un generador de</em> <span class="math notranslate nohighlight">\(G\)</span> <em>si y solo si</em> <span class="math notranslate nohighlight">\((k, m) = 1\)</span>.</p>
+</div></blockquote>
+<p><strong>Bosquejo de prueba</strong>. Es suficiente asumir que <span class="math notranslate nohighlight">\(G = \mathbb{Z}\)</span>, en cuyo caso la conclusión es fácil de probar, o que <span class="math notranslate nohighlight">\(G = \mathbb{Z}_{m}\)</span>.</p>
+<ul class="simple">
+<li><p>Si <span class="math notranslate nohighlight">\((k, m) = 1\)</span>, existen <span class="math notranslate nohighlight">\(c, d \in \mathbb{Z}\)</span> tales que <span class="math notranslate nohighlight">\(ck + dm = 1\)</span>; usar este hecho para demostrar que <span class="math notranslate nohighlight">\(k\)</span> genera <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span>.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\((k, m) = r &gt; 1\)</span>, demuestre que para <span class="math notranslate nohighlight">\(n = m /r &lt; m\)</span>, <span class="math notranslate nohighlight">\(n\overline{k} = \overline{nk} = \overline{0}\)</span> y, por tanto, <span class="math notranslate nohighlight">\(k\)</span> no puede generar <span class="math notranslate nohighlight">\(\mathbb{Z}_{m}\)</span>.</p></li>
+</ul>
+</div>
+<div class="section" id="ejercicios">
+<h2><span class="section-number">3.7. </span>Ejercicios<a class="headerlink" href="#ejercicios" title="Enlazar permanentemente con este título">¶</a></h2>
+<ol class="arabic">
+<li><p>Sean <span class="math notranslate nohighlight">\(a,b \in G\)</span>. Mostrar que</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((i)\)</span> <span class="math notranslate nohighlight">\(|a| = |a^{-1}|\)</span>;</p>
+<p><span class="math notranslate nohighlight">\((ii)\)</span> <span class="math notranslate nohighlight">\(|ab| = |ba|\)</span>, y</p>
+<p><span class="math notranslate nohighlight">\((iii)\)</span> <span class="math notranslate nohighlight">\(|a| = |cac^{-1}|\)</span> para todo <span class="math notranslate nohighlight">\(c \in G\)</span>.</p>
+</div></blockquote>
+</li>
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo abeliano que contiene elementos <span class="math notranslate nohighlight">\(a\)</span> y <span class="math notranslate nohighlight">\(b\)</span> de órdenes <span class="math notranslate nohighlight">\(m\)</span> y <span class="math notranslate nohighlight">\(m\)</span> respectivamente. Demuestre que <span class="math notranslate nohighlight">\(G\)</span> contiene un elemento cuyo orden es el mínimo común múltiplo de <span class="math notranslate nohighlight">\(m\)</span> y <span class="math notranslate nohighlight">\(m\)</span>. [Sugerencia: primero pruebe el caso cuando <span class="math notranslate nohighlight">\((m, n) = 1\)</span>.]</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> un grupo abeliano de orden <span class="math notranslate nohighlight">\(pq\)</span>, con <span class="math notranslate nohighlight">\((p, q) = 1.\)</span> Suponga que existe <span class="math notranslate nohighlight">\(a,b \in G\)</span> tal que <span class="math notranslate nohighlight">\(|a| = p\)</span>, <span class="math notranslate nohighlight">\(|b| = q\)</span> y demuestre que <span class="math notranslate nohighlight">\(G\)</span> es cíclico.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(f: G\to H\)</span> es un homomofismo, <span class="math notranslate nohighlight">\(a\in G\)</span>, y <span class="math notranslate nohighlight">\(f (a)\)</span> tiene un orden finito en <span class="math notranslate nohighlight">\(H\)</span>, entonces <span class="math notranslate nohighlight">\(|a|\)</span> es infinito o <span class="math notranslate nohighlight">\(|f(a)|\)</span> divide a <span class="math notranslate nohighlight">\(|a|\)</span>.</p></li>
+<li><p>Sea <span class="math notranslate nohighlight">\(G\)</span> el grupo multiplicativo de todas las matrices <span class="math notranslate nohighlight">\(2 \times 2\)</span> no singulares con entradas racional. Demuestre que <span class="math notranslate nohighlight">\(a =  \left(\begin{matrix} 0 &amp; -1 \\ 1 &amp; 0 \end{matrix}\right)\)</span> tiene orden <span class="math notranslate nohighlight">\(4\)</span> y <span class="math notranslate nohighlight">\(b =  \left(\begin{matrix} 0 &amp; 1 \\ -1 &amp; -1 \end{matrix}\right)\)</span> tiene orden <span class="math notranslate nohighlight">\(3\)</span>, pero <span class="math notranslate nohighlight">\(ab\)</span> tiene orden infinita. A la inversa, demuestre que el grupo aditivo <span class="math notranslate nohighlight">\(\mathbb{Z}_{2} \oplus \mathbb{Z}\)</span> contiene elementos distintos de cero <span class="math notranslate nohighlight">\(a, b\)</span> de orden infinito, de modo que <span class="math notranslate nohighlight">\(a + b\)</span> tiene un orden finito.</p></li>
+</ol>
+<ol class="arabic" start="7">
+<li><p>Sea <span class="math notranslate nohighlight">\(p\)</span> primo y <span class="math notranslate nohighlight">\(H\)</span> un subgrupo de <span class="math notranslate nohighlight">\(\mathbb{Z}(p^{\infty})\)</span> (Ejercicio 1.10).</p>
+<blockquote>
+<div><p><span class="math notranslate nohighlight">\((a)\)</span> Cada elemento de <span class="math notranslate nohighlight">\(\mathbb{Z}(p^{\infty})\)</span> tiene un orden finito pn para algunos <span class="math notranslate nohighlight">\(n \geq 0\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((b)\)</span> Si al menos un elemento de <span class="math notranslate nohighlight">\(H\)</span> tiene orden <span class="math notranslate nohighlight">\(p^{k}\)</span> y ningún elemento de <span class="math notranslate nohighlight">\(H\)</span> tiene orden mayor que <span class="math notranslate nohighlight">\(p^{k}\)</span>, entonces <span class="math notranslate nohighlight">\(H\)</span> es es el subgrupo cíclico generado por <span class="math notranslate nohighlight">\(\overline{1/p^{k}}\)</span>, de donde <span class="math notranslate nohighlight">\(H \cong \mathbb{Z}(p^{\infty})\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((c)\)</span> Si no hay límite superior en los órdenes de los elementos de <span class="math notranslate nohighlight">\(H\)</span>, entonces <span class="math notranslate nohighlight">\(H = \mathbb{Z}(p^{\infty})\)</span>; [vea el Ejercicio 2.16].</p>
+<p><span class="math notranslate nohighlight">\((d)\)</span> Los únicos subgrupos propios de <span class="math notranslate nohighlight">\(\mathbb{Z}(p^{\infty})\)</span> son los grupos cíclicos finitos <span class="math notranslate nohighlight">\(C_{n} = \langle \overline{1/p^{k}} \rangle\)</span>, (<span class="math notranslate nohighlight">\(n = 1, 2, \dots\)</span>). Además, <span class="math notranslate nohighlight">\(\langle \overline{0} \rangle = C_{0} &lt; C_{1} &lt; C_{2} &lt; C_{3} &lt; \cdots\)</span>.</p>
+<p><span class="math notranslate nohighlight">\((e)\)</span> Sean <span class="math notranslate nohighlight">\(x_{1}, x_{2}, x_{3}, \dots\)</span> ser elementos de un grupo abeliano <span class="math notranslate nohighlight">\(G\)</span> tal que <span class="math notranslate nohighlight">\(|x_{1}| = p\)</span>, <span class="math notranslate nohighlight">\(px_{2} = x_{1}, px_{3} = x_{2}, \dots, px_{n+1} = x_{n}, \dots\)</span> El subgrupo generado por <span class="math notranslate nohighlight">\(x_{i}\)</span> (<span class="math notranslate nohighlight">\(i \geq 1\)</span>) es isomorfo a <span class="math notranslate nohighlight">\(\mathbb{Z}(p^{\infty})\)</span>. [Sugerencia: Verifique que el mapa inducido por <span class="math notranslate nohighlight">\(x_{i} \mapsto \overline{1/p^{i}}\)</span> sea un isomorfismo bien definido.]</p>
+</div></blockquote>
+</li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p>Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo cíclico de orden <span class="math notranslate nohighlight">\(n\)</span> y <span class="math notranslate nohighlight">\(k|n\)</span>, entonces <span class="math notranslate nohighlight">\(G\)</span> tiene exactamente un subgrupo de orden <span class="math notranslate nohighlight">\(k\)</span>.</p></li>
+</ol>
+<ol class="arabic simple" start="8">
+<li><p>Un grupo que tiene solo un número finito de subgrupos debe ser finito.</p></li>
+<li><p>Si <span class="math notranslate nohighlight">\(G\)</span> es un grupo abeliano, entonces el conjunto <span class="math notranslate nohighlight">\(T\)</span> de todos los elementos de <span class="math notranslate nohighlight">\(G\)</span> con orden finito es un subgrupo de <span class="math notranslate nohighlight">\(G\)</span>. [Compare el ejercicio 5.]</p></li>
+<li><p>Un grupo infinito es cíclico si y solo si es isomorfo a cada uno de sus subgrupos propios.</p></li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="04-coclases.html" class="btn btn-neutral float-right" title="4. Coclases" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="02-homomorfismos-y-subgrupos.html" class="btn btn-neutral float-left" title="2. Homomorfismos y Subgrupos" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2021, Ferreira, Juan David.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
