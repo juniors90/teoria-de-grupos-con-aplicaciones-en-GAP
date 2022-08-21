@@ -36,6 +36,7 @@
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
@@ -94,7 +95,10 @@
 <li class="toctree-l1"><a class="reference internal" href="02-homomorfismos-y-subgrupos.html">2. Homomorfismos y Subgrupos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-grupos-ciclicos.html">3. Grupos Cíclicos</a></li>
 <li class="toctree-l1"><a class="reference internal" href="04-coclases.html">4. Coclases</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Normalidad, Grupo Cociente y Homomorfismos</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Normalidad, Grupo Cociente y Homomorfismos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#teorema">5.1. Teorema</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="06-grupo-simetrico-alternante-dihedral.html">6. Grupo Simétrico, Alternante y Dihedral</a></li>
 <li class="toctree-l1"><a class="reference internal" href="07-categorias-productos-coproductos-y-objetos-libres.html">7. Categorias: Productos, Coproductos y Objetos Libres</a></li>
 <li class="toctree-l1"><a class="reference internal" href="08-productos-directos-y-sumas-directas.html">8. Productos directos y Sumas directas</a></li>
@@ -179,6 +183,22 @@
             
   <div class="section" id="normalidad-grupo-cociente-y-homomorfismos">
 <h1><span class="section-number">5. </span>Normalidad, Grupo Cociente y Homomorfismos<a class="headerlink" href="#normalidad-grupo-cociente-y-homomorfismos" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>Estudiaremos aquellos subgrupos <span class="math notranslate nohighlight">\(N\)</span> de un grupo <span class="math notranslate nohighlight">\(G\)</span> tales que
+coincidan con la congruencia módulo <span class="math notranslate nohighlight">\(N\)</span> a izquierda y a derecha.
+Tales subgrupos juegan un papel importante en la determinación
+tanto de la estructura del grupo <span class="math notranslate nohighlight">\(G\)</span> como de la naturaleza de los
+homomorfismos con dominio <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<div class="section" id="teorema">
+<h2><span class="section-number">5.1. </span>Teorema<a class="headerlink" href="#teorema" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si <span class="math notranslate nohighlight">\(N\)</span> es un subgrupo de un grupo <span class="math notranslate nohighlight">\(G\)</span>, entonces las siguientes condiciones son equivalentes:</p>
+<ol class="arabic simple">
+<li><p>La congruencia módulo <span class="math notranslate nohighlight">\(N\)</span> a izquierda y a derecha coincide (esto es que, define la misma relación equivelencia <span class="math notranslate nohighlight">\(G\)</span>);</p></li>
+<li><p>Toda coclase izquierda de <span class="math notranslate nohighlight">\(N\)</span> en <span class="math notranslate nohighlight">\(G\)</span> es una coclase derecha de <span class="math notranslate nohighlight">\(N\)</span> en <span class="math notranslate nohighlight">\(G\)</span>;</p></li>
+<li><p><span class="math notranslate nohighlight">\(aN=Na\)</span> para todo <span class="math notranslate nohighlight">\(a \in G\)</span>;</p></li>
+<li><p>Para todo <span class="math notranslate nohighlight">\(a \in G\)</span>, <span class="math notranslate nohighlight">\(aNa^{-1} \subset N\)</span>, donde <span class="math notranslate nohighlight">\(aNa^{-1}=\{ ana^{-1} | n \in N \}\)</span>;</p></li>
+<li><p>Para todo <span class="math notranslate nohighlight">\(a \in G\)</span>, <span class="math notranslate nohighlight">\(aNa^{-1}=N\)</span>.</p></li>
+</ol>
+</div>
 </div>
 
 

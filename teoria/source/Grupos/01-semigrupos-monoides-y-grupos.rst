@@ -140,9 +140,9 @@ Sea :math:`D_3^{\ast}` el siguiente conjunto de "transformaciones" del triángul
     
 donde
 
+    - :math:`I` una rotación de :math:`0^{\circ}`,
     - :math:`R` es una rotación en sentido antihorario alrededor del centro de :math:`120^{\circ}`,
     - :math:`R^{2}` una rotación en sentido antihorario de :math:`240^{\circ}`,
-    - :math:`I` una rotación de :math:`360^{\circ} (= 0^{\circ})`,
     - :math:`T_{1}` es una reflexión sobre la recta que contiene a la altura del triángulo correspondiente al vértice :math:`1`,
     - :math:`T_{2}` es una reflexión sobre la recta que contiene a la altura del triángulo correspondiente al vértice :math:`2`,
     - :math:`T_{3}` es una reflexión sobre la recta que contiene a la altura del triángulo correspondiente al vértice :math:`3`,
@@ -206,10 +206,10 @@ Sea :math:`D_4^{\ast}` el siguiente conjunto de "transformaciones" del cuadrado 
     
 donde
 
+    - :math:`I` una rotación de :math:`0^{\circ}`,
     - :math:`R` es una rotación en sentido antihorario alrededor del centro de :math:`90^{\circ}`,
     - :math:`R^{2}` una rotación en sentido antihorario de :math:`180^{\circ}`,
     - :math:`R^{3}` una rotación en sentido antihorario de :math:`270^{\circ}`,
-    - :math:`I` una rotación de :math:`360^{\circ} (= 0^{\circ})`,
     - :math:`T_{x}` es una reflexión sobre el eje :math:`x`,
     - :math:`T_{1,3}` una reflexión sobre la diagonal que pasa por los vértices :math:`1` y :math:`3`,
     - :math:`T_{y}` es una reflexión sobre el eje :math:`y`,
