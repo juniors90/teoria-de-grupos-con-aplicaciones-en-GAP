@@ -97,6 +97,7 @@
 <li class="toctree-l1"><a class="reference internal" href="04-coclases.html">4. Coclases</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">5. Normalidad, Grupo Cociente y Homomorfismos</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#teorema">5.1. Teorema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definicion">5.2. Definición</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="06-grupo-simetrico-alternante-dihedral.html">6. Grupo Simétrico, Alternante y Dihedral</a></li>
@@ -190,14 +191,44 @@ tanto de la estructura del grupo <span class="math notranslate nohighlight">\(G\
 homomorfismos con dominio <span class="math notranslate nohighlight">\(G\)</span>.</p>
 <div class="section" id="teorema">
 <h2><span class="section-number">5.1. </span>Teorema<a class="headerlink" href="#teorema" title="Enlazar permanentemente con este título">¶</a></h2>
-<p>Si <span class="math notranslate nohighlight">\(N\)</span> es un subgrupo de un grupo <span class="math notranslate nohighlight">\(G\)</span>, entonces las siguientes condiciones son equivalentes:</p>
+<p>Si <span class="math notranslate nohighlight">\(N\)</span> es un subgrupo de un grupo <span class="math notranslate nohighlight">\(G\)</span>, entonces las siguientes
+condiciones son equivalentes:</p>
 <ol class="arabic simple">
-<li><p>La congruencia módulo <span class="math notranslate nohighlight">\(N\)</span> a izquierda y a derecha coincide (esto es que, define la misma relación equivelencia <span class="math notranslate nohighlight">\(G\)</span>);</p></li>
-<li><p>Toda coclase izquierda de <span class="math notranslate nohighlight">\(N\)</span> en <span class="math notranslate nohighlight">\(G\)</span> es una coclase derecha de <span class="math notranslate nohighlight">\(N\)</span> en <span class="math notranslate nohighlight">\(G\)</span>;</p></li>
+<li><p>La congruencia módulo <span class="math notranslate nohighlight">\(N\)</span> a izquierda y a derecha coincide (esto es
+que, define la misma relación equivelencia <span class="math notranslate nohighlight">\(G\)</span>);</p></li>
+<li><p>Toda coclase izquierda de <span class="math notranslate nohighlight">\(N\)</span> en <span class="math notranslate nohighlight">\(G\)</span> es una coclase derecha
+de <span class="math notranslate nohighlight">\(N\)</span> en <span class="math notranslate nohighlight">\(G\)</span>;</p></li>
 <li><p><span class="math notranslate nohighlight">\(aN=Na\)</span> para todo <span class="math notranslate nohighlight">\(a \in G\)</span>;</p></li>
-<li><p>Para todo <span class="math notranslate nohighlight">\(a \in G\)</span>, <span class="math notranslate nohighlight">\(aNa^{-1} \subset N\)</span>, donde <span class="math notranslate nohighlight">\(aNa^{-1}=\{ ana^{-1} | n \in N \}\)</span>;</p></li>
+<li><p>Para todo <span class="math notranslate nohighlight">\(a \in G\)</span>, <span class="math notranslate nohighlight">\(aNa^{-1} \subset N\)</span>,
+donde <span class="math notranslate nohighlight">\(aNa^{-1}=\{ ana^{-1} | n \in N \}\)</span>;</p></li>
 <li><p>Para todo <span class="math notranslate nohighlight">\(a \in G\)</span>, <span class="math notranslate nohighlight">\(aNa^{-1}=N\)</span>.</p></li>
 </ol>
+<p><strong>Demostración</strong></p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(1 \Longrightarrow 3\)</span>: Dos relaciones de equivalencias <span class="math notranslate nohighlight">\(R\)</span> y
+<span class="math notranslate nohighlight">\(S\)</span> son identicas si y solo si las clases de equivalencias de cada
+elemento bajo <span class="math notranslate nohighlight">\(R\)</span> es igual a la clase de equivalencia bajo <span class="math notranslate nohighlight">\(S\)</span>.
+En este caso, la clases de equivalencias son los cosets izquierdos y
+derechos respectivamente de <span class="math notranslate nohighlight">\(N\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(2 \Longrightarrow 3\)</span>: Si <span class="math notranslate nohighlight">\(aN=Na\)</span> para algún <span class="math notranslate nohighlight">\(b \in G\)</span>,
+entonces <span class="math notranslate nohighlight">\(a \in Nb \cap Na\)</span>, lo que implica que <span class="math notranslate nohighlight">\(Nb=Na\)</span> ya que
+dos cosets derechos son disjuntos de a dos o son iguales.</p></li>
+<li><p><span class="math notranslate nohighlight">\(3 \Longrightarrow 4\)</span> es trivial.</p></li>
+<li><p><span class="math notranslate nohighlight">\(4 \Longrightarrow 5\)</span> Si tenemos <span class="math notranslate nohighlight">\(aNa^{-1} \subset N\)</span>. Ya que
+<span class="math notranslate nohighlight">\(4\)</span> también se mantiene para <span class="math notranslate nohighlight">\(a^{-1}\in G\)</span>, <span class="math notranslate nohighlight">\(a^{-1}Na \subset N\)</span>.
+Por lo tanto para cada <span class="math notranslate nohighlight">\(n \in N\)</span>, <span class="math notranslate nohighlight">\(n = a(a^{-1}na)a^{-1} \subset aNa^{-1}\)</span> y
+<span class="math notranslate nohighlight">\(N \subset aNa^{-1}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(5 \Longrightarrow 2\)</span> es inmediato.</p></li>
+</ul>
+</div>
+<div class="section" id="definicion">
+<h2><span class="section-number">5.2. </span>Definición<a class="headerlink" href="#definicion" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Un subgrupo <span class="math notranslate nohighlight">\(N\)</span> de un grupo <span class="math notranslate nohighlight">\(G\)</span> que satisface las
+condiciones equivalentes del Teorema 5.1 es llamado normal en <span class="math notranslate nohighlight">\(G\)</span> (o
+un subgrupo normal de <span class="math notranslate nohighlight">\(G\)</span>).</p>
+<p>Denotamos <span class="math notranslate nohighlight">\(N \triangleleft G\)</span> si <span class="math notranslate nohighlight">\(N\)</span> es normal en <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p>En vista del Teorema 5.1 podemos omitir los subíndices «<span class="math notranslate nohighlight">\(r\)</span>» e
+«<span class="math notranslate nohighlight">\(l\)</span>» al denotar  módulo de congruencia un subgrupo normal.</p>
 </div>
 </div>
 
